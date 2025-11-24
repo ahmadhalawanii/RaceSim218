@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 24094457}
   - component: {fileID: 24094456}
   - component: {fileID: 24094455}
-  m_Layer: 0
-  m_Name: checkpoint (82)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,11 +168,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &24094456
 MeshRenderer:
@@ -242,8 +242,8 @@ GameObject:
   - component: {fileID: 26656664}
   - component: {fileID: 26656663}
   - component: {fileID: 26656662}
-  m_Layer: 0
-  m_Name: wall1 (20)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,11 +264,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &26656663
 MeshRenderer:
@@ -350,9 +350,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34725109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,8 +454,8 @@ GameObject:
   - component: {fileID: 55053777}
   - component: {fileID: 55053776}
   - component: {fileID: 55053775}
-  m_Layer: 0
-  m_Name: checkpoint (28)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,11 +491,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &55053776
 MeshRenderer:
@@ -565,8 +565,8 @@ GameObject:
   - component: {fileID: 57119353}
   - component: {fileID: 57119352}
   - component: {fileID: 57119351}
-  m_Layer: 0
-  m_Name: checkpoint (18)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,11 +602,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &57119352
 MeshRenderer:
@@ -676,8 +676,8 @@ GameObject:
   - component: {fileID: 65172372}
   - component: {fileID: 65172371}
   - component: {fileID: 65172370}
-  m_Layer: 0
-  m_Name: checkpoint (97)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,11 +713,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &65172371
 MeshRenderer:
@@ -775,6 +775,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65172368}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &72710712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &73206995
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,8 +792,8 @@ GameObject:
   - component: {fileID: 73206999}
   - component: {fileID: 73206998}
   - component: {fileID: 73206997}
-  m_Layer: 0
-  m_Name: checkpoint (80)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,11 +829,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &73206998
 MeshRenderer:
@@ -898,8 +903,8 @@ GameObject:
   - component: {fileID: 74329148}
   - component: {fileID: 74329147}
   - component: {fileID: 74329146}
-  m_Layer: 0
-  m_Name: checkpoint (53)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,11 +940,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &74329147
 MeshRenderer:
@@ -1009,8 +1014,8 @@ GameObject:
   - component: {fileID: 82688822}
   - component: {fileID: 82688821}
   - component: {fileID: 82688820}
-  m_Layer: 0
-  m_Name: checkpoint (14)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,11 +1051,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &82688821
 MeshRenderer:
@@ -1120,8 +1125,8 @@ GameObject:
   - component: {fileID: 111008328}
   - component: {fileID: 111008327}
   - component: {fileID: 111008326}
-  m_Layer: 0
-  m_Name: checkpoint (90)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1157,11 +1162,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &111008327
 MeshRenderer:
@@ -1231,8 +1236,8 @@ GameObject:
   - component: {fileID: 121587427}
   - component: {fileID: 121587426}
   - component: {fileID: 121587425}
-  m_Layer: 0
-  m_Name: checkpoint (12)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1268,11 +1273,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &121587426
 MeshRenderer:
@@ -1342,8 +1347,8 @@ GameObject:
   - component: {fileID: 150188316}
   - component: {fileID: 150188315}
   - component: {fileID: 150188314}
-  m_Layer: 0
-  m_Name: checkpoint (49)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1379,11 +1384,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &150188315
 MeshRenderer:
@@ -1453,8 +1458,8 @@ GameObject:
   - component: {fileID: 155343520}
   - component: {fileID: 155343519}
   - component: {fileID: 155343518}
-  m_Layer: 0
-  m_Name: checkpoint (57)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1490,11 +1495,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &155343519
 MeshRenderer:
@@ -1564,8 +1569,8 @@ GameObject:
   - component: {fileID: 164646082}
   - component: {fileID: 164646081}
   - component: {fileID: 164646080}
-  m_Layer: 0
-  m_Name: checkpoint (37)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1601,11 +1606,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &164646081
 MeshRenderer:
@@ -1675,8 +1680,8 @@ GameObject:
   - component: {fileID: 165645690}
   - component: {fileID: 165645689}
   - component: {fileID: 165645688}
-  m_Layer: 0
-  m_Name: checkpoint (45)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,11 +1717,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &165645689
 MeshRenderer:
@@ -1786,8 +1791,8 @@ GameObject:
   - component: {fileID: 173817854}
   - component: {fileID: 173817853}
   - component: {fileID: 173817852}
-  m_Layer: 0
-  m_Name: checkpoint (86)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1823,11 +1828,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &173817853
 MeshRenderer:
@@ -1897,8 +1902,8 @@ GameObject:
   - component: {fileID: 214242319}
   - component: {fileID: 214242318}
   - component: {fileID: 214242317}
-  m_Layer: 0
-  m_Name: wall1 (43)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1919,11 +1924,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &214242318
 MeshRenderer:
@@ -2008,8 +2013,8 @@ GameObject:
   - component: {fileID: 214467603}
   - component: {fileID: 214467602}
   - component: {fileID: 214467601}
-  m_Layer: 0
-  m_Name: wall1 (52)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2030,11 +2035,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &214467602
 MeshRenderer:
@@ -2119,8 +2124,8 @@ GameObject:
   - component: {fileID: 274067922}
   - component: {fileID: 274067921}
   - component: {fileID: 274067920}
-  m_Layer: 0
-  m_Name: checkpoint (7)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2156,11 +2161,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &274067921
 MeshRenderer:
@@ -2230,8 +2235,8 @@ GameObject:
   - component: {fileID: 280971381}
   - component: {fileID: 280971380}
   - component: {fileID: 280971379}
-  m_Layer: 0
-  m_Name: wall1 (39)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2252,11 +2257,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &280971380
 MeshRenderer:
@@ -2341,8 +2346,8 @@ GameObject:
   - component: {fileID: 287732079}
   - component: {fileID: 287732078}
   - component: {fileID: 287732077}
-  m_Layer: 0
-  m_Name: wall1 (56)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2363,11 +2368,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &287732078
 MeshRenderer:
@@ -2452,8 +2457,8 @@ GameObject:
   - component: {fileID: 288950043}
   - component: {fileID: 288950042}
   - component: {fileID: 288950041}
-  m_Layer: 0
-  m_Name: wall1 (50)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2474,11 +2479,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &288950042
 MeshRenderer:
@@ -2563,8 +2568,8 @@ GameObject:
   - component: {fileID: 305073189}
   - component: {fileID: 305073188}
   - component: {fileID: 305073187}
-  m_Layer: 0
-  m_Name: wall1 (7)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,11 +2590,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &305073188
 MeshRenderer:
@@ -2674,8 +2679,8 @@ GameObject:
   - component: {fileID: 307699125}
   - component: {fileID: 307699124}
   - component: {fileID: 307699123}
-  m_Layer: 0
-  m_Name: checkpoint (98)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2711,11 +2716,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &307699124
 MeshRenderer:
@@ -2785,8 +2790,8 @@ GameObject:
   - component: {fileID: 315130170}
   - component: {fileID: 315130169}
   - component: {fileID: 315130168}
-  m_Layer: 0
-  m_Name: wall1 (12)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2807,11 +2812,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &315130169
 MeshRenderer:
@@ -2896,8 +2901,8 @@ GameObject:
   - component: {fileID: 321704388}
   - component: {fileID: 321704387}
   - component: {fileID: 321704386}
-  m_Layer: 0
-  m_Name: checkpoint (77)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2933,11 +2938,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &321704387
 MeshRenderer:
@@ -3007,8 +3012,8 @@ GameObject:
   - component: {fileID: 324148495}
   - component: {fileID: 324148494}
   - component: {fileID: 324148493}
-  m_Layer: 0
-  m_Name: checkpoint (30)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3044,11 +3049,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &324148494
 MeshRenderer:
@@ -3118,8 +3123,8 @@ GameObject:
   - component: {fileID: 327424147}
   - component: {fileID: 327424146}
   - component: {fileID: 327424145}
-  m_Layer: 0
-  m_Name: checkpoint (106)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3155,11 +3160,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &327424146
 MeshRenderer:
@@ -3229,8 +3234,8 @@ GameObject:
   - component: {fileID: 328491945}
   - component: {fileID: 328491944}
   - component: {fileID: 328491943}
-  m_Layer: 0
-  m_Name: checkpoint (59)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3266,11 +3271,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &328491944
 MeshRenderer:
@@ -3340,8 +3345,8 @@ GameObject:
   - component: {fileID: 329167968}
   - component: {fileID: 329167967}
   - component: {fileID: 329167966}
-  m_Layer: 0
-  m_Name: checkpoint (32)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3377,11 +3382,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &329167967
 MeshRenderer:
@@ -3451,8 +3456,8 @@ GameObject:
   - component: {fileID: 330202363}
   - component: {fileID: 330202362}
   - component: {fileID: 330202361}
-  m_Layer: 0
-  m_Name: wall1 (41)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3473,11 +3478,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &330202362
 MeshRenderer:
@@ -3562,8 +3567,8 @@ GameObject:
   - component: {fileID: 351554489}
   - component: {fileID: 351554488}
   - component: {fileID: 351554487}
-  m_Layer: 0
-  m_Name: checkpoint (26)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3599,11 +3604,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &351554488
 MeshRenderer:
@@ -3673,8 +3678,8 @@ GameObject:
   - component: {fileID: 352707450}
   - component: {fileID: 352707449}
   - component: {fileID: 352707448}
-  m_Layer: 0
-  m_Name: wall1 (66)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3695,11 +3700,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &352707449
 MeshRenderer:
@@ -3921,8 +3926,8 @@ GameObject:
   - component: {fileID: 388131172}
   - component: {fileID: 388131171}
   - component: {fileID: 388131170}
-  m_Layer: 0
-  m_Name: wall1 (34)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3943,11 +3948,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &388131171
 MeshRenderer:
@@ -4032,8 +4037,8 @@ GameObject:
   - component: {fileID: 398657094}
   - component: {fileID: 398657093}
   - component: {fileID: 398657092}
-  m_Layer: 0
-  m_Name: wall1 (38)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4054,11 +4059,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &398657093
 MeshRenderer:
@@ -4143,8 +4148,8 @@ GameObject:
   - component: {fileID: 399353350}
   - component: {fileID: 399353349}
   - component: {fileID: 399353348}
-  m_Layer: 0
-  m_Name: checkpoint (27)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4180,11 +4185,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &399353349
 MeshRenderer:
@@ -4242,6 +4247,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399353346}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &423883882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2699983780271061893, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &430268537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,8 +4264,8 @@ GameObject:
   - component: {fileID: 430268541}
   - component: {fileID: 430268540}
   - component: {fileID: 430268539}
-  m_Layer: 0
-  m_Name: checkpoint (69)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4291,11 +4301,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &430268540
 MeshRenderer:
@@ -4365,8 +4375,8 @@ GameObject:
   - component: {fileID: 433462100}
   - component: {fileID: 433462099}
   - component: {fileID: 433462098}
-  m_Layer: 0
-  m_Name: wall1 (25)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4387,11 +4397,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &433462099
 MeshRenderer:
@@ -4476,8 +4486,8 @@ GameObject:
   - component: {fileID: 437889500}
   - component: {fileID: 437889499}
   - component: {fileID: 437889498}
-  m_Layer: 0
-  m_Name: checkpoint (11)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4513,11 +4523,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &437889499
 MeshRenderer:
@@ -4587,8 +4597,8 @@ GameObject:
   - component: {fileID: 444563038}
   - component: {fileID: 444563037}
   - component: {fileID: 444563036}
-  m_Layer: 0
-  m_Name: checkpoint (38)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4624,11 +4634,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &444563037
 MeshRenderer:
@@ -4698,8 +4708,8 @@ GameObject:
   - component: {fileID: 447395633}
   - component: {fileID: 447395632}
   - component: {fileID: 447395631}
-  m_Layer: 0
-  m_Name: wall1 (46)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4720,11 +4730,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &447395632
 MeshRenderer:
@@ -4809,8 +4819,8 @@ GameObject:
   - component: {fileID: 449920426}
   - component: {fileID: 449920425}
   - component: {fileID: 449920424}
-  m_Layer: 0
-  m_Name: checkpoint (41)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4846,11 +4856,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &449920425
 MeshRenderer:
@@ -4920,8 +4930,8 @@ GameObject:
   - component: {fileID: 463552695}
   - component: {fileID: 463552694}
   - component: {fileID: 463552693}
-  m_Layer: 0
-  m_Name: checkpoint (101)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4957,11 +4967,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &463552694
 MeshRenderer:
@@ -5031,8 +5041,8 @@ GameObject:
   - component: {fileID: 473007261}
   - component: {fileID: 473007260}
   - component: {fileID: 473007259}
-  m_Layer: 0
-  m_Name: checkpoint (46)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5068,11 +5078,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &473007260
 MeshRenderer:
@@ -5142,8 +5152,8 @@ GameObject:
   - component: {fileID: 474964042}
   - component: {fileID: 474964041}
   - component: {fileID: 474964040}
-  m_Layer: 0
-  m_Name: checkpoint (107)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5179,11 +5189,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &474964041
 MeshRenderer:
@@ -5253,8 +5263,8 @@ GameObject:
   - component: {fileID: 493541659}
   - component: {fileID: 493541658}
   - component: {fileID: 493541657}
-  m_Layer: 0
-  m_Name: wall1 (30)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5275,11 +5285,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &493541658
 MeshRenderer:
@@ -5364,8 +5374,8 @@ GameObject:
   - component: {fileID: 497086756}
   - component: {fileID: 497086755}
   - component: {fileID: 497086754}
-  m_Layer: 0
-  m_Name: wall1 (37)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5386,11 +5396,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &497086755
 MeshRenderer:
@@ -5475,8 +5485,8 @@ GameObject:
   - component: {fileID: 507921903}
   - component: {fileID: 507921902}
   - component: {fileID: 507921901}
-  m_Layer: 0
-  m_Name: checkpoint (4)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5512,11 +5522,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &507921902
 MeshRenderer:
@@ -5586,8 +5596,8 @@ GameObject:
   - component: {fileID: 515988000}
   - component: {fileID: 515987999}
   - component: {fileID: 515987998}
-  m_Layer: 0
-  m_Name: checkpoint (31)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5623,11 +5633,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &515987999
 MeshRenderer:
@@ -5697,8 +5707,8 @@ GameObject:
   - component: {fileID: 524257532}
   - component: {fileID: 524257531}
   - component: {fileID: 524257530}
-  m_Layer: 0
-  m_Name: checkpoint (58)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5734,11 +5744,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &524257531
 MeshRenderer:
@@ -5808,8 +5818,8 @@ GameObject:
   - component: {fileID: 534971366}
   - component: {fileID: 534971365}
   - component: {fileID: 534971364}
-  m_Layer: 0
-  m_Name: checkpoint (54)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5845,11 +5855,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &534971365
 MeshRenderer:
@@ -5919,8 +5929,8 @@ GameObject:
   - component: {fileID: 544325128}
   - component: {fileID: 544325127}
   - component: {fileID: 544325126}
-  m_Layer: 0
-  m_Name: checkpoint (40)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5956,11 +5966,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &544325127
 MeshRenderer:
@@ -6030,8 +6040,8 @@ GameObject:
   - component: {fileID: 555883632}
   - component: {fileID: 555883631}
   - component: {fileID: 555883630}
-  m_Layer: 0
-  m_Name: checkpoint (3)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6067,11 +6077,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &555883631
 MeshRenderer:
@@ -6141,8 +6151,8 @@ GameObject:
   - component: {fileID: 556268648}
   - component: {fileID: 556268647}
   - component: {fileID: 556268646}
-  m_Layer: 0
-  m_Name: checkpoint (22)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6178,11 +6188,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &556268647
 MeshRenderer:
@@ -6252,8 +6262,8 @@ GameObject:
   - component: {fileID: 557719298}
   - component: {fileID: 557719297}
   - component: {fileID: 557719296}
-  m_Layer: 0
-  m_Name: checkpoint (24)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6289,11 +6299,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &557719297
 MeshRenderer:
@@ -6363,8 +6373,8 @@ GameObject:
   - component: {fileID: 562548725}
   - component: {fileID: 562548724}
   - component: {fileID: 562548723}
-  m_Layer: 0
-  m_Name: checkpoint (116)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6400,11 +6410,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &562548724
 MeshRenderer:
@@ -6474,8 +6484,8 @@ GameObject:
   - component: {fileID: 568828632}
   - component: {fileID: 568828631}
   - component: {fileID: 568828630}
-  m_Layer: 0
-  m_Name: checkpoint (74)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6511,11 +6521,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &568828631
 MeshRenderer:
@@ -6585,8 +6595,8 @@ GameObject:
   - component: {fileID: 586279554}
   - component: {fileID: 586279553}
   - component: {fileID: 586279552}
-  m_Layer: 0
-  m_Name: checkpoint (113)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6622,11 +6632,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &586279553
 MeshRenderer:
@@ -6696,8 +6706,8 @@ GameObject:
   - component: {fileID: 606974014}
   - component: {fileID: 606974013}
   - component: {fileID: 606974012}
-  m_Layer: 0
-  m_Name: checkpoint (13)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6733,11 +6743,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &606974013
 MeshRenderer:
@@ -6807,8 +6817,8 @@ GameObject:
   - component: {fileID: 612123170}
   - component: {fileID: 612123169}
   - component: {fileID: 612123168}
-  m_Layer: 0
-  m_Name: checkpoint (36)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6844,11 +6854,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &612123169
 MeshRenderer:
@@ -6918,8 +6928,8 @@ GameObject:
   - component: {fileID: 620354149}
   - component: {fileID: 620354148}
   - component: {fileID: 620354147}
-  m_Layer: 0
-  m_Name: wall1 (51)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6940,11 +6950,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &620354148
 MeshRenderer:
@@ -7029,8 +7039,8 @@ GameObject:
   - component: {fileID: 624532586}
   - component: {fileID: 624532585}
   - component: {fileID: 624532584}
-  m_Layer: 0
-  m_Name: wall1 (23)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7051,11 +7061,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &624532585
 MeshRenderer:
@@ -7140,8 +7150,8 @@ GameObject:
   - component: {fileID: 666457139}
   - component: {fileID: 666457138}
   - component: {fileID: 666457137}
-  m_Layer: 0
-  m_Name: wall1 (8)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7162,11 +7172,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &666457138
 MeshRenderer:
@@ -7251,8 +7261,8 @@ GameObject:
   - component: {fileID: 677589791}
   - component: {fileID: 677589790}
   - component: {fileID: 677589789}
-  m_Layer: 0
-  m_Name: checkpoint (68)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7288,11 +7298,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &677589790
 MeshRenderer:
@@ -7362,8 +7372,8 @@ GameObject:
   - component: {fileID: 698652998}
   - component: {fileID: 698652997}
   - component: {fileID: 698652996}
-  m_Layer: 0
-  m_Name: checkpoint (123)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7399,11 +7409,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &698652997
 MeshRenderer:
@@ -7473,8 +7483,8 @@ GameObject:
   - component: {fileID: 706705062}
   - component: {fileID: 706705061}
   - component: {fileID: 706705060}
-  m_Layer: 0
-  m_Name: wall1 (24)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7495,11 +7505,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &706705061
 MeshRenderer:
@@ -7584,8 +7594,8 @@ GameObject:
   - component: {fileID: 710145244}
   - component: {fileID: 710145243}
   - component: {fileID: 710145242}
-  m_Layer: 0
-  m_Name: wall1 (54)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7606,11 +7616,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &710145243
 MeshRenderer:
@@ -7695,8 +7705,8 @@ GameObject:
   - component: {fileID: 727995969}
   - component: {fileID: 727995968}
   - component: {fileID: 727995967}
-  m_Layer: 0
-  m_Name: checkpoint (47)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7732,11 +7742,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &727995968
 MeshRenderer:
@@ -7806,8 +7816,8 @@ GameObject:
   - component: {fileID: 734232337}
   - component: {fileID: 734232336}
   - component: {fileID: 734232335}
-  m_Layer: 0
-  m_Name: wall1 (13)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7828,11 +7838,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &734232336
 MeshRenderer:
@@ -7917,8 +7927,8 @@ GameObject:
   - component: {fileID: 753155498}
   - component: {fileID: 753155497}
   - component: {fileID: 753155496}
-  m_Layer: 0
-  m_Name: checkpoint (117)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7954,11 +7964,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &753155497
 MeshRenderer:
@@ -8028,8 +8038,8 @@ GameObject:
   - component: {fileID: 753344135}
   - component: {fileID: 753344134}
   - component: {fileID: 753344133}
-  m_Layer: 0
-  m_Name: checkpoint (99)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8065,11 +8075,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &753344134
 MeshRenderer:
@@ -8139,8 +8149,8 @@ GameObject:
   - component: {fileID: 758517238}
   - component: {fileID: 758517237}
   - component: {fileID: 758517236}
-  m_Layer: 0
-  m_Name: checkpoint (78)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8176,11 +8186,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &758517237
 MeshRenderer:
@@ -8250,8 +8260,8 @@ GameObject:
   - component: {fileID: 765083205}
   - component: {fileID: 765083204}
   - component: {fileID: 765083203}
-  m_Layer: 0
-  m_Name: checkpoint (92)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8287,11 +8297,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &765083204
 MeshRenderer:
@@ -8361,8 +8371,8 @@ GameObject:
   - component: {fileID: 781469285}
   - component: {fileID: 781469284}
   - component: {fileID: 781469283}
-  m_Layer: 0
-  m_Name: checkpoint (62)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8398,11 +8408,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &781469284
 MeshRenderer:
@@ -8472,8 +8482,8 @@ GameObject:
   - component: {fileID: 784410337}
   - component: {fileID: 784410336}
   - component: {fileID: 784410335}
-  m_Layer: 0
-  m_Name: wall1 (44)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8494,11 +8504,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &784410336
 MeshRenderer:
@@ -8583,8 +8593,8 @@ GameObject:
   - component: {fileID: 788480489}
   - component: {fileID: 788480488}
   - component: {fileID: 788480487}
-  m_Layer: 0
-  m_Name: wall1 (21)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8605,11 +8615,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &788480488
 MeshRenderer:
@@ -8694,8 +8704,8 @@ GameObject:
   - component: {fileID: 791627718}
   - component: {fileID: 791627717}
   - component: {fileID: 791627716}
-  m_Layer: 0
-  m_Name: checkpoint (121)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8731,11 +8741,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &791627717
 MeshRenderer:
@@ -8805,8 +8815,8 @@ GameObject:
   - component: {fileID: 796261183}
   - component: {fileID: 796261182}
   - component: {fileID: 796261181}
-  m_Layer: 0
-  m_Name: checkpoint (114)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8842,11 +8852,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &796261182
 MeshRenderer:
@@ -8916,8 +8926,8 @@ GameObject:
   - component: {fileID: 800120135}
   - component: {fileID: 800120134}
   - component: {fileID: 800120133}
-  m_Layer: 0
-  m_Name: wall1 (53)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8938,11 +8948,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &800120134
 MeshRenderer:
@@ -9027,8 +9037,8 @@ GameObject:
   - component: {fileID: 813085200}
   - component: {fileID: 813085199}
   - component: {fileID: 813085198}
-  m_Layer: 0
-  m_Name: wall1 (59)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9049,11 +9059,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &813085199
 MeshRenderer:
@@ -9138,8 +9148,8 @@ GameObject:
   - component: {fileID: 839812360}
   - component: {fileID: 839812359}
   - component: {fileID: 839812358}
-  m_Layer: 0
-  m_Name: checkpoint (85)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9175,11 +9185,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &839812359
 MeshRenderer:
@@ -9249,8 +9259,8 @@ GameObject:
   - component: {fileID: 841105208}
   - component: {fileID: 841105207}
   - component: {fileID: 841105206}
-  m_Layer: 0
-  m_Name: wall1 (58)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9271,11 +9281,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &841105207
 MeshRenderer:
@@ -9360,8 +9370,8 @@ GameObject:
   - component: {fileID: 865208766}
   - component: {fileID: 865208765}
   - component: {fileID: 865208764}
-  m_Layer: 0
-  m_Name: checkpoint (104)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9397,11 +9407,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &865208765
 MeshRenderer:
@@ -9459,6 +9469,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865208762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!146 &865656503 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 7877667524431639919, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880697221
 GameObject:
   m_ObjectHideFlags: 0
@@ -9471,8 +9486,8 @@ GameObject:
   - component: {fileID: 880697224}
   - component: {fileID: 880697223}
   - component: {fileID: 880697222}
-  m_Layer: 0
-  m_Name: wall1 (40)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9493,11 +9508,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &880697223
 MeshRenderer:
@@ -9570,6 +9585,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 34725109}
   m_LocalEulerAnglesHint: {x: 0, y: -221.798, z: 0}
+--- !u!146 &913021404 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8615825633152659129, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &929622914
 GameObject:
   m_ObjectHideFlags: 0
@@ -9582,8 +9602,8 @@ GameObject:
   - component: {fileID: 929622917}
   - component: {fileID: 929622916}
   - component: {fileID: 929622915}
-  m_Layer: 0
-  m_Name: wall1 (3)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9604,11 +9624,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &929622916
 MeshRenderer:
@@ -9693,8 +9713,8 @@ GameObject:
   - component: {fileID: 937554280}
   - component: {fileID: 937554279}
   - component: {fileID: 937554278}
-  m_Layer: 0
-  m_Name: checkpoint (89)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9730,11 +9750,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &937554279
 MeshRenderer:
@@ -9804,8 +9824,8 @@ GameObject:
   - component: {fileID: 939784625}
   - component: {fileID: 939784624}
   - component: {fileID: 939784623}
-  m_Layer: 0
-  m_Name: wall1 (48)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9826,11 +9846,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &939784624
 MeshRenderer:
@@ -9915,8 +9935,8 @@ GameObject:
   - component: {fileID: 944419465}
   - component: {fileID: 944419464}
   - component: {fileID: 944419463}
-  m_Layer: 0
-  m_Name: wall1 (49)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9937,11 +9957,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &944419464
 MeshRenderer:
@@ -10026,8 +10046,8 @@ GameObject:
   - component: {fileID: 945636776}
   - component: {fileID: 945636775}
   - component: {fileID: 945636774}
-  m_Layer: 0
-  m_Name: checkpoint (100)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10063,11 +10083,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &945636775
 MeshRenderer:
@@ -10137,8 +10157,8 @@ GameObject:
   - component: {fileID: 958416831}
   - component: {fileID: 958416830}
   - component: {fileID: 958416829}
-  m_Layer: 0
-  m_Name: wall1 (22)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10159,11 +10179,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &958416830
 MeshRenderer:
@@ -10248,8 +10268,8 @@ GameObject:
   - component: {fileID: 970858423}
   - component: {fileID: 970858422}
   - component: {fileID: 970858421}
-  m_Layer: 0
-  m_Name: wall1 (19)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10270,11 +10290,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &970858422
 MeshRenderer:
@@ -10359,8 +10379,8 @@ GameObject:
   - component: {fileID: 972409743}
   - component: {fileID: 972409742}
   - component: {fileID: 972409741}
-  m_Layer: 0
-  m_Name: wall1
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10381,11 +10401,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &972409742
 MeshRenderer:
@@ -10470,8 +10490,8 @@ GameObject:
   - component: {fileID: 983656356}
   - component: {fileID: 983656355}
   - component: {fileID: 983656354}
-  m_Layer: 0
-  m_Name: checkpoint (9)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10507,11 +10527,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &983656355
 MeshRenderer:
@@ -10581,8 +10601,8 @@ GameObject:
   - component: {fileID: 983933585}
   - component: {fileID: 983933584}
   - component: {fileID: 983933583}
-  m_Layer: 0
-  m_Name: checkpoint (2)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10618,11 +10638,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &983933584
 MeshRenderer:
@@ -10748,13 +10768,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prometheus
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 1025541434198643357, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_Name
+      value: RearRightWheelcol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432273449035489855, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_Name
+      value: FrontRightWheelcol
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001459980240962088, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_Name
+      value: FrontLeftWheelcol
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557483882129953539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: m_Name
+      value: RearLeftWheelcol
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 901333271, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 354533038}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114868923}
+    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114868922}
+    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114868921}
+    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114868920}
+    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114868925}
   m_SourcePrefab: {fileID: 100100000, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
 --- !u!1 &1003355538
 GameObject:
@@ -10768,8 +10821,8 @@ GameObject:
   - component: {fileID: 1003355541}
   - component: {fileID: 1003355540}
   - component: {fileID: 1003355539}
-  m_Layer: 0
-  m_Name: wall1 (35)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10790,11 +10843,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1003355540
 MeshRenderer:
@@ -10879,8 +10932,8 @@ GameObject:
   - component: {fileID: 1017340211}
   - component: {fileID: 1017340210}
   - component: {fileID: 1017340209}
-  m_Layer: 0
-  m_Name: checkpoint (75)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10916,11 +10969,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1017340210
 MeshRenderer:
@@ -10990,8 +11043,8 @@ GameObject:
   - component: {fileID: 1030815867}
   - component: {fileID: 1030815866}
   - component: {fileID: 1030815865}
-  m_Layer: 0
-  m_Name: wall1 (5)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11012,11 +11065,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1030815866
 MeshRenderer:
@@ -11101,8 +11154,8 @@ GameObject:
   - component: {fileID: 1033261466}
   - component: {fileID: 1033261465}
   - component: {fileID: 1033261464}
-  m_Layer: 0
-  m_Name: checkpoint (112)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11138,11 +11191,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1033261465
 MeshRenderer:
@@ -11212,8 +11265,8 @@ GameObject:
   - component: {fileID: 1042423383}
   - component: {fileID: 1042423382}
   - component: {fileID: 1042423381}
-  m_Layer: 0
-  m_Name: wall1 (67)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11234,11 +11287,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1042423382
 MeshRenderer:
@@ -11323,8 +11376,8 @@ GameObject:
   - component: {fileID: 1042607587}
   - component: {fileID: 1042607586}
   - component: {fileID: 1042607585}
-  m_Layer: 0
-  m_Name: checkpoint (21)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11360,11 +11413,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1042607586
 MeshRenderer:
@@ -11434,8 +11487,8 @@ GameObject:
   - component: {fileID: 1063667361}
   - component: {fileID: 1063667360}
   - component: {fileID: 1063667359}
-  m_Layer: 0
-  m_Name: checkpoint (35)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11471,11 +11524,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1063667360
 MeshRenderer:
@@ -11545,8 +11598,8 @@ GameObject:
   - component: {fileID: 1101368881}
   - component: {fileID: 1101368880}
   - component: {fileID: 1101368879}
-  m_Layer: 0
-  m_Name: wall1 (10)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11567,11 +11620,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1101368880
 MeshRenderer:
@@ -11656,8 +11709,8 @@ GameObject:
   - component: {fileID: 1125765504}
   - component: {fileID: 1125765503}
   - component: {fileID: 1125765502}
-  m_Layer: 0
-  m_Name: wall1 (42)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11678,11 +11731,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1125765503
 MeshRenderer:
@@ -11767,8 +11820,8 @@ GameObject:
   - component: {fileID: 1139958439}
   - component: {fileID: 1139958438}
   - component: {fileID: 1139958437}
-  m_Layer: 0
-  m_Name: wall1 (45)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11789,11 +11842,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1139958438
 MeshRenderer:
@@ -11878,8 +11931,8 @@ GameObject:
   - component: {fileID: 1142390740}
   - component: {fileID: 1142390739}
   - component: {fileID: 1142390738}
-  m_Layer: 0
-  m_Name: checkpoint (48)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11915,11 +11968,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1142390739
 MeshRenderer:
@@ -11989,8 +12042,8 @@ GameObject:
   - component: {fileID: 1162307972}
   - component: {fileID: 1162307971}
   - component: {fileID: 1162307970}
-  m_Layer: 0
-  m_Name: checkpoint (95)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12026,11 +12079,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1162307971
 MeshRenderer:
@@ -12088,6 +12141,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162307968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!146 &1162834056 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8706808774334851022, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1174041145
 GameObject:
   m_ObjectHideFlags: 0
@@ -12100,8 +12158,8 @@ GameObject:
   - component: {fileID: 1174041149}
   - component: {fileID: 1174041148}
   - component: {fileID: 1174041147}
-  m_Layer: 0
-  m_Name: checkpoint (61)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12137,11 +12195,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1174041148
 MeshRenderer:
@@ -12211,8 +12269,8 @@ GameObject:
   - component: {fileID: 1189850871}
   - component: {fileID: 1189850870}
   - component: {fileID: 1189850869}
-  m_Layer: 0
-  m_Name: checkpoint (6)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12248,11 +12306,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1189850870
 MeshRenderer:
@@ -12322,8 +12380,8 @@ GameObject:
   - component: {fileID: 1192174973}
   - component: {fileID: 1192174972}
   - component: {fileID: 1192174971}
-  m_Layer: 0
-  m_Name: checkpoint (81)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12359,11 +12417,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1192174972
 MeshRenderer:
@@ -12433,8 +12491,8 @@ GameObject:
   - component: {fileID: 1196519221}
   - component: {fileID: 1196519220}
   - component: {fileID: 1196519219}
-  m_Layer: 0
-  m_Name: checkpoint (52)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12470,11 +12528,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1196519220
 MeshRenderer:
@@ -12544,8 +12602,8 @@ GameObject:
   - component: {fileID: 1196803993}
   - component: {fileID: 1196803992}
   - component: {fileID: 1196803991}
-  m_Layer: 0
-  m_Name: checkpoint (8)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12581,11 +12639,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1196803992
 MeshRenderer:
@@ -12655,8 +12713,8 @@ GameObject:
   - component: {fileID: 1250458194}
   - component: {fileID: 1250458193}
   - component: {fileID: 1250458192}
-  m_Layer: 0
-  m_Name: wall2
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12677,11 +12735,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1250458193
 MeshRenderer:
@@ -12766,8 +12824,8 @@ GameObject:
   - component: {fileID: 1257838078}
   - component: {fileID: 1257838077}
   - component: {fileID: 1257838076}
-  m_Layer: 0
-  m_Name: wall1 (62)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12788,11 +12846,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1257838077
 MeshRenderer:
@@ -12877,8 +12935,8 @@ GameObject:
   - component: {fileID: 1265108149}
   - component: {fileID: 1265108148}
   - component: {fileID: 1265108147}
-  m_Layer: 0
-  m_Name: wall1 (28)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12899,11 +12957,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1265108148
 MeshRenderer:
@@ -12988,8 +13046,8 @@ GameObject:
   - component: {fileID: 1273523172}
   - component: {fileID: 1273523171}
   - component: {fileID: 1273523170}
-  m_Layer: 0
-  m_Name: checkpoint (70)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13025,11 +13083,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1273523171
 MeshRenderer:
@@ -13099,8 +13157,8 @@ GameObject:
   - component: {fileID: 1274391027}
   - component: {fileID: 1274391026}
   - component: {fileID: 1274391025}
-  m_Layer: 0
-  m_Name: checkpoint (88)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13136,11 +13194,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1274391026
 MeshRenderer:
@@ -13210,8 +13268,8 @@ GameObject:
   - component: {fileID: 1279387583}
   - component: {fileID: 1279387582}
   - component: {fileID: 1279387581}
-  m_Layer: 0
-  m_Name: checkpoint (56)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13247,11 +13305,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1279387582
 MeshRenderer:
@@ -13321,8 +13379,8 @@ GameObject:
   - component: {fileID: 1283850786}
   - component: {fileID: 1283850785}
   - component: {fileID: 1283850784}
-  m_Layer: 0
-  m_Name: checkpoint (105)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13358,11 +13416,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1283850785
 MeshRenderer:
@@ -13432,8 +13490,8 @@ GameObject:
   - component: {fileID: 1284299922}
   - component: {fileID: 1284299921}
   - component: {fileID: 1284299920}
-  m_Layer: 0
-  m_Name: wall1 (1)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13454,11 +13512,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1284299921
 MeshRenderer:
@@ -13531,6 +13589,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 34725109}
   m_LocalEulerAnglesHint: {x: 0, y: -11.728, z: 0}
+--- !u!146 &1308198132 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 2239677824950174677, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334912185
 GameObject:
   m_ObjectHideFlags: 0
@@ -13543,8 +13606,8 @@ GameObject:
   - component: {fileID: 1334912188}
   - component: {fileID: 1334912187}
   - component: {fileID: 1334912186}
-  m_Layer: 0
-  m_Name: wall1 (64)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13565,11 +13628,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1334912187
 MeshRenderer:
@@ -13654,8 +13717,8 @@ GameObject:
   - component: {fileID: 1339118329}
   - component: {fileID: 1339118328}
   - component: {fileID: 1339118327}
-  m_Layer: 0
-  m_Name: checkpoint (60)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13691,11 +13754,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1339118328
 MeshRenderer:
@@ -13765,8 +13828,8 @@ GameObject:
   - component: {fileID: 1357740909}
   - component: {fileID: 1357740908}
   - component: {fileID: 1357740907}
-  m_Layer: 0
-  m_Name: wall1 (18)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13787,11 +13850,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1357740908
 MeshRenderer:
@@ -13876,8 +13939,8 @@ GameObject:
   - component: {fileID: 1360150831}
   - component: {fileID: 1360150830}
   - component: {fileID: 1360150829}
-  m_Layer: 0
-  m_Name: checkpoint (79)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13913,11 +13976,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1360150830
 MeshRenderer:
@@ -13987,8 +14050,8 @@ GameObject:
   - component: {fileID: 1363179057}
   - component: {fileID: 1363179056}
   - component: {fileID: 1363179055}
-  m_Layer: 0
-  m_Name: checkpoint (96)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14024,11 +14087,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1363179056
 MeshRenderer:
@@ -14098,8 +14161,8 @@ GameObject:
   - component: {fileID: 1364971076}
   - component: {fileID: 1364971075}
   - component: {fileID: 1364971074}
-  m_Layer: 0
-  m_Name: wall1 (32)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14120,11 +14183,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1364971075
 MeshRenderer:
@@ -14209,8 +14272,8 @@ GameObject:
   - component: {fileID: 1379908122}
   - component: {fileID: 1379908121}
   - component: {fileID: 1379908120}
-  m_Layer: 0
-  m_Name: wall1 (26)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14231,11 +14294,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1379908121
 MeshRenderer:
@@ -14320,8 +14383,8 @@ GameObject:
   - component: {fileID: 1393357374}
   - component: {fileID: 1393357373}
   - component: {fileID: 1393357372}
-  m_Layer: 0
-  m_Name: checkpoint
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14357,11 +14420,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1393357373
 MeshRenderer:
@@ -14431,8 +14494,8 @@ GameObject:
   - component: {fileID: 1401653223}
   - component: {fileID: 1401653222}
   - component: {fileID: 1401653221}
-  m_Layer: 0
-  m_Name: checkpoint (67)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14468,11 +14531,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1401653222
 MeshRenderer:
@@ -14542,8 +14605,8 @@ GameObject:
   - component: {fileID: 1408190751}
   - component: {fileID: 1408190750}
   - component: {fileID: 1408190749}
-  m_Layer: 0
-  m_Name: checkpoint (91)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14579,11 +14642,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1408190750
 MeshRenderer:
@@ -14653,8 +14716,8 @@ GameObject:
   - component: {fileID: 1408743813}
   - component: {fileID: 1408743812}
   - component: {fileID: 1408743811}
-  m_Layer: 0
-  m_Name: wall1 (63)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14675,11 +14738,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1408743812
 MeshRenderer:
@@ -14764,8 +14827,8 @@ GameObject:
   - component: {fileID: 1414719615}
   - component: {fileID: 1414719614}
   - component: {fileID: 1414719613}
-  m_Layer: 0
-  m_Name: checkpoint (84)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14801,11 +14864,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1414719614
 MeshRenderer:
@@ -14875,8 +14938,8 @@ GameObject:
   - component: {fileID: 1419003983}
   - component: {fileID: 1419003982}
   - component: {fileID: 1419003981}
-  m_Layer: 0
-  m_Name: wall1 (33)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14897,11 +14960,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1419003982
 MeshRenderer:
@@ -14986,8 +15049,8 @@ GameObject:
   - component: {fileID: 1420875261}
   - component: {fileID: 1420875260}
   - component: {fileID: 1420875259}
-  m_Layer: 0
-  m_Name: checkpoint (73)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15023,11 +15086,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1420875260
 MeshRenderer:
@@ -15097,8 +15160,8 @@ GameObject:
   - component: {fileID: 1421345506}
   - component: {fileID: 1421345505}
   - component: {fileID: 1421345504}
-  m_Layer: 0
-  m_Name: checkpoint (103)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15134,11 +15197,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1421345505
 MeshRenderer:
@@ -15208,8 +15271,8 @@ GameObject:
   - component: {fileID: 1431818833}
   - component: {fileID: 1431818832}
   - component: {fileID: 1431818831}
-  m_Layer: 0
-  m_Name: checkpoint (111)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15245,11 +15308,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1431818832
 MeshRenderer:
@@ -15319,8 +15382,8 @@ GameObject:
   - component: {fileID: 1437888586}
   - component: {fileID: 1437888585}
   - component: {fileID: 1437888584}
-  m_Layer: 0
-  m_Name: checkpoint (33)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15356,11 +15419,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1437888585
 MeshRenderer:
@@ -15430,8 +15493,8 @@ GameObject:
   - component: {fileID: 1442531331}
   - component: {fileID: 1442531330}
   - component: {fileID: 1442531329}
-  m_Layer: 0
-  m_Name: checkpoint (110)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15467,11 +15530,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1442531330
 MeshRenderer:
@@ -15541,8 +15604,8 @@ GameObject:
   - component: {fileID: 1448257760}
   - component: {fileID: 1448257759}
   - component: {fileID: 1448257758}
-  m_Layer: 0
-  m_Name: wall1 (29)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15563,11 +15626,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1448257759
 MeshRenderer:
@@ -15652,8 +15715,8 @@ GameObject:
   - component: {fileID: 1459983066}
   - component: {fileID: 1459983065}
   - component: {fileID: 1459983064}
-  m_Layer: 0
-  m_Name: checkpoint (71)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15689,11 +15752,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1459983065
 MeshRenderer:
@@ -15763,8 +15826,8 @@ GameObject:
   - component: {fileID: 1473341727}
   - component: {fileID: 1473341726}
   - component: {fileID: 1473341725}
-  m_Layer: 0
-  m_Name: checkpoint (63)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15800,11 +15863,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1473341726
 MeshRenderer:
@@ -15874,8 +15937,8 @@ GameObject:
   - component: {fileID: 1483360622}
   - component: {fileID: 1483360621}
   - component: {fileID: 1483360620}
-  m_Layer: 0
-  m_Name: checkpoint (64)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15911,11 +15974,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1483360621
 MeshRenderer:
@@ -15985,8 +16048,8 @@ GameObject:
   - component: {fileID: 1503979832}
   - component: {fileID: 1503979831}
   - component: {fileID: 1503979830}
-  m_Layer: 0
-  m_Name: wall1 (16)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16007,11 +16070,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1503979831
 MeshRenderer:
@@ -16096,8 +16159,8 @@ GameObject:
   - component: {fileID: 1530155293}
   - component: {fileID: 1530155292}
   - component: {fileID: 1530155291}
-  m_Layer: 0
-  m_Name: checkpoint (66)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16133,11 +16196,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1530155292
 MeshRenderer:
@@ -16207,8 +16270,8 @@ GameObject:
   - component: {fileID: 1530478961}
   - component: {fileID: 1530478960}
   - component: {fileID: 1530478959}
-  m_Layer: 0
-  m_Name: checkpoint (23)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16244,11 +16307,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1530478960
 MeshRenderer:
@@ -16318,8 +16381,8 @@ GameObject:
   - component: {fileID: 1540175884}
   - component: {fileID: 1540175883}
   - component: {fileID: 1540175882}
-  m_Layer: 0
-  m_Name: wall1 (4)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16340,11 +16403,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1540175883
 MeshRenderer:
@@ -16429,8 +16492,8 @@ GameObject:
   - component: {fileID: 1571445348}
   - component: {fileID: 1571445347}
   - component: {fileID: 1571445346}
-  m_Layer: 0
-  m_Name: checkpoint (20)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16466,11 +16529,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1571445347
 MeshRenderer:
@@ -16540,8 +16603,8 @@ GameObject:
   - component: {fileID: 1577738889}
   - component: {fileID: 1577738888}
   - component: {fileID: 1577738887}
-  m_Layer: 0
-  m_Name: checkpoint (34)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16577,11 +16640,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1577738888
 MeshRenderer:
@@ -16651,8 +16714,8 @@ GameObject:
   - component: {fileID: 1587751925}
   - component: {fileID: 1587751924}
   - component: {fileID: 1587751923}
-  m_Layer: 0
-  m_Name: wall1 (60)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16673,11 +16736,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1587751924
 MeshRenderer:
@@ -16762,8 +16825,8 @@ GameObject:
   - component: {fileID: 1646915395}
   - component: {fileID: 1646915394}
   - component: {fileID: 1646915393}
-  m_Layer: 0
-  m_Name: wall1 (15)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16784,11 +16847,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1646915394
 MeshRenderer:
@@ -16873,8 +16936,8 @@ GameObject:
   - component: {fileID: 1650147617}
   - component: {fileID: 1650147616}
   - component: {fileID: 1650147615}
-  m_Layer: 0
-  m_Name: checkpoint (25)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16910,11 +16973,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1650147616
 MeshRenderer:
@@ -16984,8 +17047,8 @@ GameObject:
   - component: {fileID: 1650560926}
   - component: {fileID: 1650560925}
   - component: {fileID: 1650560924}
-  m_Layer: 0
-  m_Name: checkpoint (19)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17021,11 +17084,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1650560925
 MeshRenderer:
@@ -17095,8 +17158,8 @@ GameObject:
   - component: {fileID: 1660655135}
   - component: {fileID: 1660655134}
   - component: {fileID: 1660655133}
-  m_Layer: 0
-  m_Name: checkpoint (87)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17132,11 +17195,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1660655134
 MeshRenderer:
@@ -17203,9 +17266,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677782439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: checkpoints
-  m_TagString: Untagged
+  m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17358,8 +17421,8 @@ GameObject:
   - component: {fileID: 1686594129}
   - component: {fileID: 1686594128}
   - component: {fileID: 1686594127}
-  m_Layer: 0
-  m_Name: wall1 (61)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17380,11 +17443,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1686594128
 MeshRenderer:
@@ -17469,8 +17532,8 @@ GameObject:
   - component: {fileID: 1695705451}
   - component: {fileID: 1695705450}
   - component: {fileID: 1695705449}
-  m_Layer: 0
-  m_Name: checkpoint (29)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17506,11 +17569,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1695705450
 MeshRenderer:
@@ -17580,8 +17643,8 @@ GameObject:
   - component: {fileID: 1709755191}
   - component: {fileID: 1709755190}
   - component: {fileID: 1709755189}
-  m_Layer: 0
-  m_Name: checkpoint (16)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17617,11 +17680,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1709755190
 MeshRenderer:
@@ -17691,8 +17754,8 @@ GameObject:
   - component: {fileID: 1736875311}
   - component: {fileID: 1736875310}
   - component: {fileID: 1736875309}
-  m_Layer: 0
-  m_Name: wall1 (55)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17713,11 +17776,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1736875310
 MeshRenderer:
@@ -17802,8 +17865,8 @@ GameObject:
   - component: {fileID: 1741371562}
   - component: {fileID: 1741371561}
   - component: {fileID: 1741371560}
-  m_Layer: 0
-  m_Name: checkpoint (102)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17839,11 +17902,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1741371561
 MeshRenderer:
@@ -18052,8 +18115,8 @@ GameObject:
   - component: {fileID: 1761111684}
   - component: {fileID: 1761111683}
   - component: {fileID: 1761111682}
-  m_Layer: 0
-  m_Name: wall1 (65)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18074,11 +18137,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1761111683
 MeshRenderer:
@@ -18163,8 +18226,8 @@ GameObject:
   - component: {fileID: 1772115122}
   - component: {fileID: 1772115121}
   - component: {fileID: 1772115120}
-  m_Layer: 0
-  m_Name: checkpoint (65)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18200,11 +18263,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1772115121
 MeshRenderer:
@@ -18274,8 +18337,8 @@ GameObject:
   - component: {fileID: 1780413624}
   - component: {fileID: 1780413623}
   - component: {fileID: 1780413622}
-  m_Layer: 0
-  m_Name: checkpoint (15)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18311,11 +18374,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1780413623
 MeshRenderer:
@@ -18385,8 +18448,8 @@ GameObject:
   - component: {fileID: 1781004200}
   - component: {fileID: 1781004199}
   - component: {fileID: 1781004198}
-  m_Layer: 0
-  m_Name: checkpoint (83)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18422,11 +18485,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1781004199
 MeshRenderer:
@@ -18611,6 +18674,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!4 &1817963651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6528361102885328038, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1826303770
 GameObject:
   m_ObjectHideFlags: 0
@@ -18623,8 +18691,8 @@ GameObject:
   - component: {fileID: 1826303773}
   - component: {fileID: 1826303772}
   - component: {fileID: 1826303771}
-  m_Layer: 0
-  m_Name: wall1 (11)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18645,11 +18713,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1826303772
 MeshRenderer:
@@ -18734,8 +18802,8 @@ GameObject:
   - component: {fileID: 1836322667}
   - component: {fileID: 1836322666}
   - component: {fileID: 1836322665}
-  m_Layer: 0
-  m_Name: wall1 (31)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18756,11 +18824,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1836322666
 MeshRenderer:
@@ -18845,8 +18913,8 @@ GameObject:
   - component: {fileID: 1836751131}
   - component: {fileID: 1836751130}
   - component: {fileID: 1836751129}
-  m_Layer: 0
-  m_Name: wall1 (17)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18867,11 +18935,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1836751130
 MeshRenderer:
@@ -18944,6 +19012,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 34725109}
   m_LocalEulerAnglesHint: {x: 0, y: -94.861, z: 0}
+--- !u!4 &1837378544 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2897099083007925690, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839104310
 GameObject:
   m_ObjectHideFlags: 0
@@ -18956,8 +19029,8 @@ GameObject:
   - component: {fileID: 1839104313}
   - component: {fileID: 1839104312}
   - component: {fileID: 1839104311}
-  m_Layer: 0
-  m_Name: wall1 (68)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18978,11 +19051,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1839104312
 MeshRenderer:
@@ -19067,8 +19140,8 @@ GameObject:
   - component: {fileID: 1843965488}
   - component: {fileID: 1843965487}
   - component: {fileID: 1843965486}
-  m_Layer: 0
-  m_Name: wall1 (57)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19089,11 +19162,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1843965487
 MeshRenderer:
@@ -19178,8 +19251,8 @@ GameObject:
   - component: {fileID: 1863366931}
   - component: {fileID: 1863366930}
   - component: {fileID: 1863366929}
-  m_Layer: 0
-  m_Name: checkpoint (42)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19215,11 +19288,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1863366930
 MeshRenderer:
@@ -19289,8 +19362,8 @@ GameObject:
   - component: {fileID: 1866896742}
   - component: {fileID: 1866896741}
   - component: {fileID: 1866896740}
-  m_Layer: 0
-  m_Name: checkpoint (119)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19326,11 +19399,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1866896741
 MeshRenderer:
@@ -19400,8 +19473,8 @@ GameObject:
   - component: {fileID: 1876381200}
   - component: {fileID: 1876381199}
   - component: {fileID: 1876381198}
-  m_Layer: 0
-  m_Name: checkpoint (94)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19437,11 +19510,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1876381199
 MeshRenderer:
@@ -19511,8 +19584,8 @@ GameObject:
   - component: {fileID: 1884125601}
   - component: {fileID: 1884125600}
   - component: {fileID: 1884125599}
-  m_Layer: 0
-  m_Name: checkpoint (39)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19548,11 +19621,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1884125600
 MeshRenderer:
@@ -19622,8 +19695,8 @@ GameObject:
   - component: {fileID: 1887973365}
   - component: {fileID: 1887973364}
   - component: {fileID: 1887973363}
-  m_Layer: 0
-  m_Name: checkpoint (72)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19659,11 +19732,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1887973364
 MeshRenderer:
@@ -19733,8 +19806,8 @@ GameObject:
   - component: {fileID: 1894402462}
   - component: {fileID: 1894402461}
   - component: {fileID: 1894402460}
-  m_Layer: 0
-  m_Name: wall1 (47)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19755,11 +19828,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1894402461
 MeshRenderer:
@@ -19844,8 +19917,8 @@ GameObject:
   - component: {fileID: 1898881566}
   - component: {fileID: 1898881565}
   - component: {fileID: 1898881564}
-  m_Layer: 0
-  m_Name: wall1 (9)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19866,11 +19939,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1898881565
 MeshRenderer:
@@ -19955,8 +20028,8 @@ GameObject:
   - component: {fileID: 1942267270}
   - component: {fileID: 1942267269}
   - component: {fileID: 1942267268}
-  m_Layer: 0
-  m_Name: checkpoint (10)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19992,11 +20065,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1942267269
 MeshRenderer:
@@ -20066,8 +20139,8 @@ GameObject:
   - component: {fileID: 1950588248}
   - component: {fileID: 1950588247}
   - component: {fileID: 1950588246}
-  m_Layer: 0
-  m_Name: checkpoint (115)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20103,11 +20176,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1950588247
 MeshRenderer:
@@ -20177,8 +20250,8 @@ GameObject:
   - component: {fileID: 1984531046}
   - component: {fileID: 1984531045}
   - component: {fileID: 1984531044}
-  m_Layer: 0
-  m_Name: checkpoint (44)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20214,11 +20287,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1984531045
 MeshRenderer:
@@ -20288,8 +20361,8 @@ GameObject:
   - component: {fileID: 2009488877}
   - component: {fileID: 2009488876}
   - component: {fileID: 2009488875}
-  m_Layer: 0
-  m_Name: checkpoint (5)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20325,11 +20398,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2009488876
 MeshRenderer:
@@ -20399,8 +20472,8 @@ GameObject:
   - component: {fileID: 2011238737}
   - component: {fileID: 2011238736}
   - component: {fileID: 2011238735}
-  m_Layer: 0
-  m_Name: checkpoint (108)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20436,11 +20509,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2011238736
 MeshRenderer:
@@ -20510,8 +20583,8 @@ GameObject:
   - component: {fileID: 2024868841}
   - component: {fileID: 2024868840}
   - component: {fileID: 2024868839}
-  m_Layer: 0
-  m_Name: wall1 (14)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20532,11 +20605,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2024868840
 MeshRenderer:
@@ -20621,8 +20694,8 @@ GameObject:
   - component: {fileID: 2029315368}
   - component: {fileID: 2029315367}
   - component: {fileID: 2029315366}
-  m_Layer: 0
-  m_Name: checkpoint (109)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20658,11 +20731,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2029315367
 MeshRenderer:
@@ -20732,8 +20805,8 @@ GameObject:
   - component: {fileID: 2034983201}
   - component: {fileID: 2034983200}
   - component: {fileID: 2034983199}
-  m_Layer: 0
-  m_Name: wall1 (2)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20754,11 +20827,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2034983200
 MeshRenderer:
@@ -20843,8 +20916,8 @@ GameObject:
   - component: {fileID: 2054340038}
   - component: {fileID: 2054340037}
   - component: {fileID: 2054340036}
-  m_Layer: 0
-  m_Name: checkpoint (51)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20880,11 +20953,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2054340037
 MeshRenderer:
@@ -20954,8 +21027,8 @@ GameObject:
   - component: {fileID: 2088250593}
   - component: {fileID: 2088250592}
   - component: {fileID: 2088250591}
-  m_Layer: 0
-  m_Name: checkpoint (55)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20991,11 +21064,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2088250592
 MeshRenderer:
@@ -21065,8 +21138,8 @@ GameObject:
   - component: {fileID: 2092665714}
   - component: {fileID: 2092665713}
   - component: {fileID: 2092665712}
-  m_Layer: 0
-  m_Name: checkpoint (17)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21102,11 +21175,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2092665713
 MeshRenderer:
@@ -21176,8 +21249,8 @@ GameObject:
   - component: {fileID: 2106132436}
   - component: {fileID: 2106132435}
   - component: {fileID: 2106132434}
-  m_Layer: 0
-  m_Name: wall1 (36)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21198,11 +21271,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2106132435
 MeshRenderer:
@@ -21287,8 +21360,8 @@ GameObject:
   - component: {fileID: 2106154369}
   - component: {fileID: 2106154368}
   - component: {fileID: 2106154367}
-  m_Layer: 0
-  m_Name: checkpoint (50)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21324,11 +21397,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2106154368
 MeshRenderer:
@@ -21391,6 +21464,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
   m_PrefabInstance: {fileID: 988804704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2114868920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72710712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ed10ad19ca88a48831401a275dd104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarDriverAgent
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 1200
+  checkpoints: {fileID: 0}
+  spawnPosition: {fileID: 0}
+--- !u!114 &2114868921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72710712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Policies.BehaviorParameters
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 0300000003000000
+    VectorActionSize: 0300000003000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 3
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
+--- !u!114 &2114868922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72710712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a7b672c6108194e811c6ee18048344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarDriver
+  maxMotorTorque: 1500
+  maxSteeringAngle: 30
+  brakeForce: 3000
+  frontLeftCollider: {fileID: 1308198132}
+  frontRightCollider: {fileID: 865656503}
+  rearLeftCollider: {fileID: 913021404}
+  rearRightCollider: {fileID: 1162834056}
+  frontLeftMesh: {fileID: 2125418651}
+  frontRightMesh: {fileID: 1837378544}
+  rearLeftMesh: {fileID: 1817963651}
+  rearRightMesh: {fileID: 423883882}
+--- !u!114 &2114868923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72710712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Sensors.RayPerceptionSensorComponent3D
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - checkpoints
+  - walls
+  m_RaysPerDirection: 6
+  m_MaxRayDegrees: 70
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967241
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
+--- !u!114 &2114868925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72710712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
+  DecisionPeriod: 1
+  TakeActionsBetweenDecisions: 1
+--- !u!4 &2125418651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1276657636418845578, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  m_PrefabInstance: {fileID: 988804704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129274241
 GameObject:
   m_ObjectHideFlags: 0
@@ -21403,8 +21594,8 @@ GameObject:
   - component: {fileID: 2129274244}
   - component: {fileID: 2129274243}
   - component: {fileID: 2129274242}
-  m_Layer: 0
-  m_Name: wall1 (27)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21425,11 +21616,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2129274243
 MeshRenderer:
@@ -21514,8 +21705,8 @@ GameObject:
   - component: {fileID: 2132157626}
   - component: {fileID: 2132157625}
   - component: {fileID: 2132157624}
-  m_Layer: 0
-  m_Name: wall1 (6)
+  m_Layer: 7
+  m_Name: walls
   m_TagString: walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21536,11 +21727,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2132157625
 MeshRenderer:
@@ -21625,8 +21816,8 @@ GameObject:
   - component: {fileID: 2134494873}
   - component: {fileID: 2134494872}
   - component: {fileID: 2134494871}
-  m_Layer: 0
-  m_Name: checkpoint (93)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21662,11 +21853,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2134494872
 MeshRenderer:
@@ -21736,8 +21927,8 @@ GameObject:
   - component: {fileID: 2135525673}
   - component: {fileID: 2135525672}
   - component: {fileID: 2135525671}
-  m_Layer: 0
-  m_Name: checkpoint (1)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21773,11 +21964,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2135525672
 MeshRenderer:
@@ -21847,8 +22038,8 @@ GameObject:
   - component: {fileID: 2140536620}
   - component: {fileID: 2140536619}
   - component: {fileID: 2140536618}
-  m_Layer: 0
-  m_Name: checkpoint (43)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21884,11 +22075,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2140536619
 MeshRenderer:
@@ -21958,8 +22149,8 @@ GameObject:
   - component: {fileID: 2147183846}
   - component: {fileID: 2147183845}
   - component: {fileID: 2147183844}
-  m_Layer: 0
-  m_Name: checkpoint (76)
+  m_Layer: 6
+  m_Name: checkpoints
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21995,11 +22186,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2147183845
 MeshRenderer:
