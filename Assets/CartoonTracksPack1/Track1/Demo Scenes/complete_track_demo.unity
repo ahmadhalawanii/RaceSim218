@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 24094456}
   - component: {fileID: 24094455}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 83
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,6 +350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34725109}
+  - component: {fileID: 34725110}
   m_Layer: 7
   m_Name: walls
   m_TagString: walls
@@ -442,6 +443,18 @@ Transform:
   - {fileID: 1250458195}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34725110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34725108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d71ec9613414a419b49217ae687196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wall
 --- !u!1 &55053773
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +468,7 @@ GameObject:
   - component: {fileID: 55053776}
   - component: {fileID: 55053775}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 29
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +579,7 @@ GameObject:
   - component: {fileID: 57119352}
   - component: {fileID: 57119351}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 19
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,13 +593,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57119349}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.4899428, z: -0, w: 0.87175465}
+  m_LocalRotation: {x: 0, y: 0.8717702, z: 0, w: 0.48991507}
   m_LocalPosition: {x: 137.9, y: 0, z: -19.8}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -58.674, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 121.33, z: 0}
 --- !u!65 &57119351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -677,7 +690,7 @@ GameObject:
   - component: {fileID: 65172371}
   - component: {fileID: 65172370}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 98
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,7 +806,7 @@ GameObject:
   - component: {fileID: 73206998}
   - component: {fileID: 73206997}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 81
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +917,7 @@ GameObject:
   - component: {fileID: 74329147}
   - component: {fileID: 74329146}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 54
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,7 +1028,7 @@ GameObject:
   - component: {fileID: 82688821}
   - component: {fileID: 82688820}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 15
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1029,13 +1042,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82688818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6245978, z: -0, w: 0.7809466}
+  m_LocalRotation: {x: 0, y: 0.7809757, z: 0, w: 0.6245614}
   m_LocalPosition: {x: 109.6, y: 0, z: -4.5}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -77.305, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 102.7, z: 0}
 --- !u!65 &82688820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1126,7 +1139,7 @@ GameObject:
   - component: {fileID: 111008327}
   - component: {fileID: 111008326}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 91
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,7 +1250,7 @@ GameObject:
   - component: {fileID: 121587426}
   - component: {fileID: 121587425}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 13
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,13 +1264,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121587423}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6531476, z: -0, w: 0.75723064}
+  m_LocalRotation: {x: 0, y: 0.7572801, z: 0, w: 0.65309024}
   m_LocalPosition: {x: 92.9, y: 0, z: -0.5}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -81.559, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 98.45, z: 0}
 --- !u!65 &121587425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1348,7 +1361,7 @@ GameObject:
   - component: {fileID: 150188315}
   - component: {fileID: 150188314}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 50
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1459,7 +1472,7 @@ GameObject:
   - component: {fileID: 155343519}
   - component: {fileID: 155343518}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 58
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1570,7 +1583,7 @@ GameObject:
   - component: {fileID: 164646081}
   - component: {fileID: 164646080}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 38
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1681,7 +1694,7 @@ GameObject:
   - component: {fileID: 165645689}
   - component: {fileID: 165645688}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 46
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,7 +1805,7 @@ GameObject:
   - component: {fileID: 173817853}
   - component: {fileID: 173817852}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 87
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2125,7 +2138,7 @@ GameObject:
   - component: {fileID: 274067921}
   - component: {fileID: 274067920}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 8
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2139,13 +2152,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274067918}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 44, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &274067920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2680,7 +2693,7 @@ GameObject:
   - component: {fileID: 307699124}
   - component: {fileID: 307699123}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 99
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2902,7 +2915,7 @@ GameObject:
   - component: {fileID: 321704387}
   - component: {fileID: 321704386}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 78
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3013,7 +3026,7 @@ GameObject:
   - component: {fileID: 324148494}
   - component: {fileID: 324148493}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 31
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3124,7 +3137,7 @@ GameObject:
   - component: {fileID: 327424146}
   - component: {fileID: 327424145}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 107
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3235,7 +3248,7 @@ GameObject:
   - component: {fileID: 328491944}
   - component: {fileID: 328491943}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 60
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3346,7 +3359,7 @@ GameObject:
   - component: {fileID: 329167967}
   - component: {fileID: 329167966}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 33
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3568,7 +3581,7 @@ GameObject:
   - component: {fileID: 351554488}
   - component: {fileID: 351554487}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 27
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4149,7 +4162,7 @@ GameObject:
   - component: {fileID: 399353349}
   - component: {fileID: 399353348}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 28
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4265,7 +4278,7 @@ GameObject:
   - component: {fileID: 430268540}
   - component: {fileID: 430268539}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 70
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4487,7 +4500,7 @@ GameObject:
   - component: {fileID: 437889499}
   - component: {fileID: 437889498}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 12
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4501,13 +4514,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437889496}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6838453, z: -0, w: 0.729627}
+  m_LocalRotation: {x: 0, y: 0.7295657, z: 0, w: 0.68391085}
   m_LocalPosition: {x: 83.4, y: 0, z: 0.2}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -86.29, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 93.7, z: 0}
 --- !u!65 &437889498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4598,7 +4611,7 @@ GameObject:
   - component: {fileID: 444563037}
   - component: {fileID: 444563036}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 39
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4820,7 +4833,7 @@ GameObject:
   - component: {fileID: 449920425}
   - component: {fileID: 449920424}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 42
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4931,7 +4944,7 @@ GameObject:
   - component: {fileID: 463552694}
   - component: {fileID: 463552693}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 102
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5042,7 +5055,7 @@ GameObject:
   - component: {fileID: 473007260}
   - component: {fileID: 473007259}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 47
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5153,7 +5166,7 @@ GameObject:
   - component: {fileID: 474964041}
   - component: {fileID: 474964040}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 108
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5486,7 +5499,7 @@ GameObject:
   - component: {fileID: 507921902}
   - component: {fileID: 507921901}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 5
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5500,13 +5513,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507921899}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 9.3, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &507921901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5597,7 +5610,7 @@ GameObject:
   - component: {fileID: 515987999}
   - component: {fileID: 515987998}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 32
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5708,7 +5721,7 @@ GameObject:
   - component: {fileID: 524257531}
   - component: {fileID: 524257530}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 59
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5819,7 +5832,7 @@ GameObject:
   - component: {fileID: 534971365}
   - component: {fileID: 534971364}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 55
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5930,7 +5943,7 @@ GameObject:
   - component: {fileID: 544325127}
   - component: {fileID: 544325126}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 41
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6041,7 +6054,7 @@ GameObject:
   - component: {fileID: 555883631}
   - component: {fileID: 555883630}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 4
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6055,13 +6068,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555883628}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.5, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &555883630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6152,7 +6165,7 @@ GameObject:
   - component: {fileID: 556268647}
   - component: {fileID: 556268646}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 23
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6263,7 +6276,7 @@ GameObject:
   - component: {fileID: 557719297}
   - component: {fileID: 557719296}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 25
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6374,7 +6387,7 @@ GameObject:
   - component: {fileID: 562548724}
   - component: {fileID: 562548723}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 117
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6485,7 +6498,7 @@ GameObject:
   - component: {fileID: 568828631}
   - component: {fileID: 568828630}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 75
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6596,7 +6609,7 @@ GameObject:
   - component: {fileID: 586279553}
   - component: {fileID: 586279552}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 114
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6707,7 +6720,7 @@ GameObject:
   - component: {fileID: 606974013}
   - component: {fileID: 606974012}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 14
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6721,13 +6734,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606974010}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6531476, z: -0, w: 0.75723064}
+  m_LocalRotation: {x: 0, y: 0.7572801, z: 0, w: 0.65309024}
   m_LocalPosition: {x: 100.7, y: 0, z: -2.9}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -81.559, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 98.45, z: 0}
 --- !u!65 &606974012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6818,7 +6831,7 @@ GameObject:
   - component: {fileID: 612123169}
   - component: {fileID: 612123168}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 37
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7262,7 +7275,7 @@ GameObject:
   - component: {fileID: 677589790}
   - component: {fileID: 677589789}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 69
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7373,7 +7386,7 @@ GameObject:
   - component: {fileID: 698652997}
   - component: {fileID: 698652996}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 121
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7706,7 +7719,7 @@ GameObject:
   - component: {fileID: 727995968}
   - component: {fileID: 727995967}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 48
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7928,7 +7941,7 @@ GameObject:
   - component: {fileID: 753155497}
   - component: {fileID: 753155496}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 118
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8039,7 +8052,7 @@ GameObject:
   - component: {fileID: 753344134}
   - component: {fileID: 753344133}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 100
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8150,7 +8163,7 @@ GameObject:
   - component: {fileID: 758517237}
   - component: {fileID: 758517236}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 79
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8261,7 +8274,7 @@ GameObject:
   - component: {fileID: 765083204}
   - component: {fileID: 765083203}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 93
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8372,7 +8385,7 @@ GameObject:
   - component: {fileID: 781469284}
   - component: {fileID: 781469283}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 63
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8705,7 +8718,7 @@ GameObject:
   - component: {fileID: 791627717}
   - component: {fileID: 791627716}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 120
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8816,7 +8829,7 @@ GameObject:
   - component: {fileID: 796261182}
   - component: {fileID: 796261181}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 115
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9149,7 +9162,7 @@ GameObject:
   - component: {fileID: 839812359}
   - component: {fileID: 839812358}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 86
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9371,7 +9384,7 @@ GameObject:
   - component: {fileID: 865208765}
   - component: {fileID: 865208764}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 105
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9714,7 +9727,7 @@ GameObject:
   - component: {fileID: 937554279}
   - component: {fileID: 937554278}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 90
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10047,7 +10060,7 @@ GameObject:
   - component: {fileID: 945636775}
   - component: {fileID: 945636774}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 101
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10491,7 +10504,7 @@ GameObject:
   - component: {fileID: 983656355}
   - component: {fileID: 983656354}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 10
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10505,13 +10518,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983656352}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 63.7, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &983656354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10602,7 +10615,7 @@ GameObject:
   - component: {fileID: 983933584}
   - component: {fileID: 983933583}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 3
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10616,13 +10629,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983933581}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -19.7, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &983933583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10726,7 +10739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.59
+      value: 28.48
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10734,7 +10747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.51
+      value: -31.04
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10933,7 +10946,7 @@ GameObject:
   - component: {fileID: 1017340210}
   - component: {fileID: 1017340209}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 76
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11155,7 +11168,7 @@ GameObject:
   - component: {fileID: 1033261465}
   - component: {fileID: 1033261464}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 113
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11377,7 +11390,7 @@ GameObject:
   - component: {fileID: 1042607586}
   - component: {fileID: 1042607585}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 22
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11488,7 +11501,7 @@ GameObject:
   - component: {fileID: 1063667360}
   - component: {fileID: 1063667359}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 36
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11932,7 +11945,7 @@ GameObject:
   - component: {fileID: 1142390739}
   - component: {fileID: 1142390738}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 49
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12043,7 +12056,7 @@ GameObject:
   - component: {fileID: 1162307971}
   - component: {fileID: 1162307970}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 96
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12159,7 +12172,7 @@ GameObject:
   - component: {fileID: 1174041148}
   - component: {fileID: 1174041147}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 62
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12270,7 +12283,7 @@ GameObject:
   - component: {fileID: 1189850870}
   - component: {fileID: 1189850869}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 7
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12284,13 +12297,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189850867}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 32.4, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1189850869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12381,7 +12394,7 @@ GameObject:
   - component: {fileID: 1192174972}
   - component: {fileID: 1192174971}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 82
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12492,7 +12505,7 @@ GameObject:
   - component: {fileID: 1196519220}
   - component: {fileID: 1196519219}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 53
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12603,7 +12616,7 @@ GameObject:
   - component: {fileID: 1196803992}
   - component: {fileID: 1196803991}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 9
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12617,13 +12630,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196803989}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 52.9, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1196803991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13047,7 +13060,7 @@ GameObject:
   - component: {fileID: 1273523171}
   - component: {fileID: 1273523170}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 71
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13158,7 +13171,7 @@ GameObject:
   - component: {fileID: 1274391026}
   - component: {fileID: 1274391025}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 89
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13269,7 +13282,7 @@ GameObject:
   - component: {fileID: 1279387582}
   - component: {fileID: 1279387581}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 57
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13380,7 +13393,7 @@ GameObject:
   - component: {fileID: 1283850785}
   - component: {fileID: 1283850784}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 106
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13718,7 +13731,7 @@ GameObject:
   - component: {fileID: 1339118328}
   - component: {fileID: 1339118327}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 61
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13940,7 +13953,7 @@ GameObject:
   - component: {fileID: 1360150830}
   - component: {fileID: 1360150829}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 80
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14051,7 +14064,7 @@ GameObject:
   - component: {fileID: 1363179056}
   - component: {fileID: 1363179055}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 97
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14384,7 +14397,7 @@ GameObject:
   - component: {fileID: 1393357373}
   - component: {fileID: 1393357372}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 1
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14398,13 +14411,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393357370}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -49.3, y: 0, z: -0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1393357372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14495,7 +14508,7 @@ GameObject:
   - component: {fileID: 1401653222}
   - component: {fileID: 1401653221}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 68
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14606,7 +14619,7 @@ GameObject:
   - component: {fileID: 1408190750}
   - component: {fileID: 1408190749}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 92
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14828,7 +14841,7 @@ GameObject:
   - component: {fileID: 1414719614}
   - component: {fileID: 1414719613}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 85
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15050,7 +15063,7 @@ GameObject:
   - component: {fileID: 1420875260}
   - component: {fileID: 1420875259}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 74
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15161,7 +15174,7 @@ GameObject:
   - component: {fileID: 1421345505}
   - component: {fileID: 1421345504}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 104
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15272,7 +15285,7 @@ GameObject:
   - component: {fileID: 1431818832}
   - component: {fileID: 1431818831}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 112
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15383,7 +15396,7 @@ GameObject:
   - component: {fileID: 1437888585}
   - component: {fileID: 1437888584}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 34
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15494,7 +15507,7 @@ GameObject:
   - component: {fileID: 1442531330}
   - component: {fileID: 1442531329}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 111
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15716,7 +15729,7 @@ GameObject:
   - component: {fileID: 1459983065}
   - component: {fileID: 1459983064}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 72
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15827,7 +15840,7 @@ GameObject:
   - component: {fileID: 1473341726}
   - component: {fileID: 1473341725}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 64
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15938,7 +15951,7 @@ GameObject:
   - component: {fileID: 1483360621}
   - component: {fileID: 1483360620}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 65
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16160,7 +16173,7 @@ GameObject:
   - component: {fileID: 1530155292}
   - component: {fileID: 1530155291}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 67
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16271,7 +16284,7 @@ GameObject:
   - component: {fileID: 1530478960}
   - component: {fileID: 1530478959}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 24
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16493,7 +16506,7 @@ GameObject:
   - component: {fileID: 1571445347}
   - component: {fileID: 1571445346}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 21
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16507,13 +16520,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571445344}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.4368898, z: -0, w: 0.8995151}
+  m_LocalRotation: {x: 0, y: 0.8995197, z: 0, w: 0.4368803}
   m_LocalPosition: {x: 157.2, y: 0, z: -34.3}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -51.811, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 128.19, z: 0}
 --- !u!65 &1571445346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16604,7 +16617,7 @@ GameObject:
   - component: {fileID: 1577738888}
   - component: {fileID: 1577738887}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 35
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16937,7 +16950,7 @@ GameObject:
   - component: {fileID: 1650147616}
   - component: {fileID: 1650147615}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 26
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17048,7 +17061,7 @@ GameObject:
   - component: {fileID: 1650560925}
   - component: {fileID: 1650560924}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 20
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17062,13 +17075,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650560922}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.4567513, z: -0, w: 0.8895945}
+  m_LocalRotation: {x: 0, y: 0.8896157, z: 0, w: 0.45670974}
   m_LocalPosition: {x: 147.1, y: 0, z: -26.9}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -54.355, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 125.65, z: 0}
 --- !u!65 &1650560924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17159,7 +17172,7 @@ GameObject:
   - component: {fileID: 1660655134}
   - component: {fileID: 1660655133}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 88
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17266,6 +17279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677782439}
+  - component: {fileID: 1677782440}
   m_Layer: 6
   m_Name: checkpoints
   m_TagString: checkpoints
@@ -17304,6 +17318,7 @@ Transform:
   - {fileID: 1780413621}
   - {fileID: 1709755188}
   - {fileID: 2092665711}
+  - {fileID: 57119350}
   - {fileID: 1650560923}
   - {fileID: 1571445345}
   - {fileID: 1042607584}
@@ -17406,9 +17421,22 @@ Transform:
   - {fileID: 1866896739}
   - {fileID: 791627715}
   - {fileID: 698652995}
-  - {fileID: 57119350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677782440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677782438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753b3ddd22dbce54c99a3f0fe15c65b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::checkpoints
+  checkpointsParent: {fileID: 1677782439}
+  checkpointList: []
 --- !u!1 &1686594126
 GameObject:
   m_ObjectHideFlags: 0
@@ -17533,7 +17561,7 @@ GameObject:
   - component: {fileID: 1695705450}
   - component: {fileID: 1695705449}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 30
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17644,7 +17672,7 @@ GameObject:
   - component: {fileID: 1709755190}
   - component: {fileID: 1709755189}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 17
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17658,13 +17686,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709755187}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.552162, z: -0, w: 0.83373696}
+  m_LocalRotation: {x: 0, y: 0.83374125, z: 0, w: 0.5521554}
   m_LocalPosition: {x: 122.5, y: 0, z: -11.2}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -67.031, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 112.97, z: 0}
 --- !u!65 &1709755189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17866,7 +17894,7 @@ GameObject:
   - component: {fileID: 1741371561}
   - component: {fileID: 1741371560}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 103
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17976,41 +18004,13 @@ GameObject:
   - component: {fileID: 1748392909}
   - component: {fileID: 1748392908}
   - component: {fileID: 1748392907}
-  - component: {fileID: 1748392906}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: spawnpoint
+  m_TagString: spawnpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1748392906
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748392905}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &1748392907
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18057,7 +18057,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6c9add16078538c469efa51ad44d8d7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18096,13 +18096,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748392905}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.64, y: 3.3, z: -32.9}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1909276973}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1761111681
 GameObject:
   m_ObjectHideFlags: 0
@@ -18227,7 +18227,7 @@ GameObject:
   - component: {fileID: 1772115121}
   - component: {fileID: 1772115120}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 66
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18338,7 +18338,7 @@ GameObject:
   - component: {fileID: 1780413623}
   - component: {fileID: 1780413622}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 16
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18352,13 +18352,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780413620}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.58039224, z: -0, w: 0.8143371}
+  m_LocalRotation: {x: 0, y: 0.8143688, z: 0, w: 0.5803478}
   m_LocalPosition: {x: 116.1, y: 0, z: -6}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -70.956, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 109.05, z: 0}
 --- !u!65 &1780413622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18449,7 +18449,7 @@ GameObject:
   - component: {fileID: 1781004199}
   - component: {fileID: 1781004198}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 84
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19252,7 +19252,7 @@ GameObject:
   - component: {fileID: 1863366930}
   - component: {fileID: 1863366929}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 43
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19363,7 +19363,7 @@ GameObject:
   - component: {fileID: 1866896741}
   - component: {fileID: 1866896740}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 119
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19474,7 +19474,7 @@ GameObject:
   - component: {fileID: 1876381199}
   - component: {fileID: 1876381198}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 95
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19585,7 +19585,7 @@ GameObject:
   - component: {fileID: 1884125600}
   - component: {fileID: 1884125599}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 40
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19696,7 +19696,7 @@ GameObject:
   - component: {fileID: 1887973364}
   - component: {fileID: 1887973363}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 73
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20016,6 +20016,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 34725109}
   m_LocalEulerAnglesHint: {x: 0, y: -50.838, z: 0}
+--- !u!1 &1909276971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909276973}
+  - component: {fileID: 1909276972}
+  m_Layer: 0
+  m_Name: spawnpoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1909276972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909276971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eed8decfc24eec40a10e6f3baa57015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnpoint
+--- !u!4 &1909276973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909276971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.86, y: 0.8, z: -27.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1748392910}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942267266
 GameObject:
   m_ObjectHideFlags: 0
@@ -20029,7 +20074,7 @@ GameObject:
   - component: {fileID: 1942267269}
   - component: {fileID: 1942267268}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 11
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20043,13 +20088,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942267266}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 73.7, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1942267268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20140,7 +20185,7 @@ GameObject:
   - component: {fileID: 1950588247}
   - component: {fileID: 1950588246}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 116
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20251,7 +20296,7 @@ GameObject:
   - component: {fileID: 1984531045}
   - component: {fileID: 1984531044}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 45
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20362,7 +20407,7 @@ GameObject:
   - component: {fileID: 2009488876}
   - component: {fileID: 2009488875}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 6
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20376,13 +20421,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009488873}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 22.5, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &2009488875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20473,7 +20518,7 @@ GameObject:
   - component: {fileID: 2011238736}
   - component: {fileID: 2011238735}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 109
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20695,7 +20740,7 @@ GameObject:
   - component: {fileID: 2029315367}
   - component: {fileID: 2029315366}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 110
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20917,7 +20962,7 @@ GameObject:
   - component: {fileID: 2054340037}
   - component: {fileID: 2054340036}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 52
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21028,7 +21073,7 @@ GameObject:
   - component: {fileID: 2088250592}
   - component: {fileID: 2088250591}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 56
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21139,7 +21184,7 @@ GameObject:
   - component: {fileID: 2092665713}
   - component: {fileID: 2092665712}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 18
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21153,13 +21198,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092665710}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.5132617, z: -0, w: 0.8582322}
+  m_LocalRotation: {x: 0, y: 0.85824406, z: 0, w: 0.51324177}
   m_LocalPosition: {x: 131.4, y: 0, z: -15.1}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -61.763, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 118.24, z: 0}
 --- !u!65 &2092665712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21361,7 +21406,7 @@ GameObject:
   - component: {fileID: 2106154368}
   - component: {fileID: 2106154367}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 51
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21480,8 +21525,8 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1200
-  checkpoints: {fileID: 0}
-  spawnPosition: {fileID: 0}
+  checkpoints: {fileID: 1677782440}
+  spawnPosition: {fileID: 1748392910}
 --- !u!114 &2114868921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21507,7 +21552,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 3
   m_BehaviorType: 0
-  m_BehaviorName: My Behavior
+  m_BehaviorName: Car Driver
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -21557,7 +21602,7 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967241
+    m_Bits: 4294966985
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -21817,7 +21862,7 @@ GameObject:
   - component: {fileID: 2134494872}
   - component: {fileID: 2134494871}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 94
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21928,7 +21973,7 @@ GameObject:
   - component: {fileID: 2135525672}
   - component: {fileID: 2135525671}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 2
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21942,13 +21987,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135525669}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -33.8, y: 0, z: 0}
   m_LocalScale: {x: 32.362682, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1677782439}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &2135525671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22039,7 +22084,7 @@ GameObject:
   - component: {fileID: 2140536619}
   - component: {fileID: 2140536618}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 44
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22150,7 +22195,7 @@ GameObject:
   - component: {fileID: 2147183845}
   - component: {fileID: 2147183844}
   m_Layer: 6
-  m_Name: checkpoints
+  m_Name: checkpoints 77
   m_TagString: checkpoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22922,6 +22967,6 @@ SceneRoots:
   - {fileID: 5029537156919747304}
   - {fileID: 8109261745373479568}
   - {fileID: 988804704}
-  - {fileID: 1748392910}
+  - {fileID: 1909276973}
   - {fileID: 1677782439}
   - {fileID: 34725109}

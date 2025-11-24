@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Wall
+public class Wall : MonoBehaviour
 {
     
 }

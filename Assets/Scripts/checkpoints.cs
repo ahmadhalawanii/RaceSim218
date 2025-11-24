@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class checkpoints : MonoBehaviour
 {
+    [Header("Optional: Parent holding all checkpoints")]
+    public Transform checkpointsParent;
+
     [Header("Ordered Checkpoints (in track sequence)")]
     public List<Transform> checkpointList;
 
-    // Per-car tracking: each car has its own next checkpoint index
     private Dictionary<Transform, int> nextCheckpointIndexDict;
 
     public class CarCheckpointEventArgs : EventArgs
@@ -21,6 +23,19 @@ public class checkpoints : MonoBehaviour
     private void Awake()
     {
         nextCheckpointIndexDict = new Dictionary<Transform, int>();
+
+        // Auto-fill the checkpoint list if a parent is assigned
+        if (checkpointsParent != null && checkpointList.Count == 0)
+        {
+            checkpointList = new List<Transform>();
+            foreach (Transform child in checkpointsParent)
+            {
+                checkpointList.Add(child);
+            }
+
+            // Optional: sort by name if needed (e.g., Checkpoint_01, Checkpoint_02)
+            checkpointList.Sort((a, b) => a.name.CompareTo(b.name));
+        }
     }
 
     public void ResetCheckpoint(Transform car)
@@ -40,7 +55,6 @@ public class checkpoints : MonoBehaviour
         return checkpointList[index];
     }
 
-    // Called by each checkpoint trigger
     public void CarThroughCheckpoint(Transform checkpoint, Transform car)
     {
         if (!nextCheckpointIndexDict.ContainsKey(car))
@@ -50,21 +64,13 @@ public class checkpoints : MonoBehaviour
 
         if (checkpoint == checkpointList[expectedIndex])
         {
-            // Correct checkpoint
             nextCheckpointIndexDict[car] = (expectedIndex + 1) % checkpointList.Count;
 
-            OnCarCorrectCheckpoint?.Invoke(this, new CarCheckpointEventArgs
-            {
-                carTransform = car
-            });
+            OnCarCorrectCheckpoint?.Invoke(this, new CarCheckpointEventArgs { carTransform = car });
         }
         else
         {
-            // Wrong checkpoint
-            OnCarWrongCheckpoint?.Invoke(this, new CarCheckpointEventArgs
-            {
-                carTransform = car
-            });
+            OnCarWrongCheckpoint?.Invoke(this, new CarCheckpointEventArgs { carTransform = car });
         }
     }
 }

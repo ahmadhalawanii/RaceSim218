@@ -15,3 +15,20 @@ Assets/CartoonTracksPack1/**/*.png
 *.sln
 *.user
 *.vs/
+
+# Python / ML
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.dll
+*.so
+*.dylib
+
+# PyTorch / Tensorflow large binaries
+*.pt
+*.pth
+*.ckpt
+*.h5
