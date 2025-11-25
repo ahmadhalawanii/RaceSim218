@@ -42,7 +42,28 @@ public class CarDriver : MonoBehaviour
         frontRightCollider.brakeTorque = brakeForce;
         rearLeftCollider.brakeTorque = brakeForce;
         rearRightCollider.brakeTorque = brakeForce;
+
+        // Stop wheel rotation completely
+        ResetWheels();
     }
+
+    // ********** NEW: reset wheel rotations and steer angles **********
+    public void ResetWheels()
+    {
+        frontLeftCollider.motorTorque = 0f;
+        frontRightCollider.motorTorque = 0f;
+        rearLeftCollider.motorTorque = 0f;
+        rearRightCollider.motorTorque = 0f;
+
+        frontLeftCollider.brakeTorque = brakeForce;
+        frontRightCollider.brakeTorque = brakeForce;
+        rearLeftCollider.brakeTorque = brakeForce;
+        rearRightCollider.brakeTorque = brakeForce;
+
+        frontLeftCollider.steerAngle = 0f;
+        frontRightCollider.steerAngle = 0f;
+    }
+
     // ****************************************
 
     void Update()

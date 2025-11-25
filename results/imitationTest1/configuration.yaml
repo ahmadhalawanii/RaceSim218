@@ -1,6 +1,6 @@
 default_settings: null
 behaviors:
-  CarDriver:
+  Car Driver:
     trainer_type: ppo
     hyperparameters:
       batch_size: 10
@@ -34,6 +34,22 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
+      gail:
+        gamma: 0.99
+        strength: 0.5
+        network_settings:
+          normalize: false
+          hidden_units: 128
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+          deterministic: false
+        learning_rate: 0.0003
+        encoding_size: null
+        use_actions: false
+        use_vail: false
+        demo_path: driveDemos/carDriveDemo.demo
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
@@ -42,7 +58,13 @@ behaviors:
     summary_freq: 10000
     threaded: false
     self_play: null
-    behavioral_cloning: null
+    behavioral_cloning:
+      demo_path: driveDemos/carDriveDemo.demo
+      steps: 0
+      strength: 0.5
+      samples_per_update: 0
+      num_epoch: null
+      batch_size: null
 env_settings:
   env_path: null
   env_args: null
@@ -63,7 +85,7 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: TestParameter01
+  run_id: imitationTest1
   initialize_from: null
   load_model: false
   resume: false

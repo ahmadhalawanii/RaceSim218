@@ -1,161 +1,157 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
-using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Sensors;
 
 public class CarDriverAgent : Agent
 {
-    [SerializeField] private checkpoints checkpoints;
-    [SerializeField] private Transform spawnPosition;      // spawn point for wall reset
-    [SerializeField] private float speedMultiplier = 5f;  // forward speed
-    [SerializeField] private float rayLength = 5f;        // ray distance for wall detection
-    [SerializeField] private float rayPenalty = -0.05f;   // penalty for approaching walls
+    [Header("Car Components")]
+    public CarDriver carDriver;
+    public Rigidbody rb;
 
-    private CarDriver carDriver;
-    private Vector3 lastPosition;
+    [Header("Checkpoint Manager")]
+    public checkpoints checkpoints;
+
+    [Header("Ray Perception")]
+    public RayPerceptionSensorComponent3D raySensor;
+
+    private Vector3 startPos;
+    private Quaternion startRot;
+    private float lastDistanceToNextCheckpoint;
 
     private void Awake()
     {
-        carDriver = GetComponent<CarDriver>();
+        if (carDriver == null) carDriver = GetComponent<CarDriver>();
+        if (rb == null) rb = GetComponent<Rigidbody>();
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        // Rigidbody settings
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = false;
-            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-            rb.interpolation = RigidbodyInterpolation.Interpolate;
-        }
-    }
+        startPos = transform.position;
+        startRot = transform.rotation;
 
-    private void Start()
-    {
-        checkpoints.OnCarCorrectCheckpoint += checkpoints_OnCarCorrectCheckpoint;
-        checkpoints.OnCarWrongCheckpoint += checkpoints_OnCarWrongCheckpoint;
-    }
-
-    private void checkpoints_OnCarWrongCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
-    {
-        if (e.carTransform == transform)
-        {
-            AddReward(-0.5f); // penalize, no reset
-        }
-    }
-
-    private void checkpoints_OnCarCorrectCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
-    {
-        if (e.carTransform == transform)
-        {
-            AddReward(1f); // reward for correct checkpoint
-        }
+        // Subscribe to checkpoint events
+        checkpoints.OnCarCorrectCheckpoint += Checkpoints_OnCarCorrectCheckpoint;
+        checkpoints.OnCarWrongCheckpoint += Checkpoints_OnCarWrongCheckpoint;
     }
 
     public override void OnEpisodeBegin()
     {
-        // Only reset internal state, not car position
+        // Stop the car completely
         carDriver.StopCompletely();
-        checkpoints.ResetCheckpoint(transform);
-        lastPosition = transform.position;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        // Reset position and rotation
+        transform.position = startPos;
+        transform.rotation = startRot;
+
+        // Reset checkpoint distance
+        Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+        if (nextCp != null)
+            lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        Vector3 checkpointDir = (checkpoints.GetNextCheckpoint(transform).position - transform.position).normalized;
-        float directionDot = Vector3.Dot(transform.forward, checkpointDir);
-        sensor.AddObservation(directionDot);
+        // Ray sensor automatically observes walls/obstacles
+        // Add relative direction to next checkpoint
+        Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+        if (nextCp == null) return;
+
+        Vector3 dirToCheckpoint = (nextCp.position - transform.position).normalized;
+        sensor.AddObservation(transform.InverseTransformDirection(dirToCheckpoint));
+
+        // Forward velocity
+        float forwardVel = Vector3.Dot(rb.linearVelocity, transform.forward);
+        sensor.AddObservation(forwardVel);
+
+        // Distance to next checkpoint
+        float dist = Vector3.Distance(transform.position, nextCp.position);
+        sensor.AddObservation(dist);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // Decode actions
-        float forwardAmount = 0f;
-        float turnAmount = 0f;
+        // Continuous actions: steer [-1,1], throttle [-1,1]
+        float steer = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        float throttle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
-        switch (actions.DiscreteActions[0])
+        // Apply inputs
+        carDriver.SetInputs(throttle, steer);
+
+        // Penalize backward motion
+        float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
+        if (forwardVelocity < -0.5f) AddReward(-0.01f);
+
+        // Reward approaching next checkpoint
+        Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+        if (nextCp != null)
         {
-            case 0: forwardAmount = 0f; break;
-            case 1: forwardAmount = 1f * speedMultiplier; break;
-            case 2: forwardAmount = 0f; break; // no reverse
+            float dist = Vector3.Distance(transform.position, nextCp.position);
+            if (dist < lastDistanceToNextCheckpoint)
+                AddReward(0.002f);
+            else
+                AddReward(-0.001f);
+
+            lastDistanceToNextCheckpoint = dist;
         }
 
-        switch (actions.DiscreteActions[1])
-        {
-            case 0: turnAmount = 0f; break;
-            case 1: turnAmount = +1f; break;
-            case 2: turnAmount = -1f; break;
-        }
-
-        carDriver.SetInputs(forwardAmount, turnAmount);
-
-        // Reward shaping: distance traveled
-        float distanceTravelled = Vector3.Distance(transform.position, lastPosition);
-        AddReward(0.1f * distanceTravelled);
-
-        // Reward shaping: direction
-        Vector3 checkpointDir = (checkpoints.GetNextCheckpoint(transform).position - transform.position).normalized;
-        float directionDot = Vector3.Dot(transform.forward, checkpointDir);
-        AddReward(0.05f * directionDot);
-
-        lastPosition = transform.position;
-
-        // Ray-based wall avoidance penalty
-        Vector3[] rayDirections = {
-            transform.forward,
-            Quaternion.Euler(0, 30, 0) * transform.forward,
-            Quaternion.Euler(0, -30, 0) * transform.forward
-        };
-
-        foreach (Vector3 dir in rayDirections)
-        {
-            if (Physics.Raycast(transform.position, dir, out RaycastHit hit, rayLength))
-            {
-                if (hit.collider.CompareTag("walls"))
-                {
-                    AddReward(rayPenalty);
-                }
-            }
-            Debug.DrawRay(transform.position, dir * rayLength, Color.red);
-        }
+        // Small time penalty to encourage faster completion
+        AddReward(-0.0002f);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        int forwardAction = 0;
-        if (Input.GetKey(KeyCode.W)) forwardAction = 1;
-
-        int turnAction = 0;
-        if (Input.GetKey(KeyCode.D)) turnAction = 1;
-        if (Input.GetKey(KeyCode.A)) turnAction = 2;
-
-        ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
-        discreteActions[0] = forwardAction;
-        discreteActions[1] = turnAction;
+        var cont = actionsOut.ContinuousActions;
+        cont[0] = Input.GetAxis("Horizontal"); // steer
+        cont[1] = Input.GetAxis("Vertical");   // throttle
     }
 
-    // Trigger-based wall reset
+    private void Checkpoints_OnCarCorrectCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
+    {
+        if (e.carTransform != transform) return;
+        AddReward(1f);
+    }
+
+    private void Checkpoints_OnCarWrongCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
+    {
+        if (e.carTransform != transform) return;
+        AddReward(-1f);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        // Only reset if hitting a wall
         if (other.CompareTag("walls"))
         {
-            Debug.Log("Wall hit! Resetting to spawn.");
-            AddReward(-1f); // collision penalty
-            transform.position = spawnPosition.position + new Vector3(
-                Random.Range(-1f, 1f),
-                0,
-                Random.Range(-1f, 1f)
-            );
-            transform.rotation = spawnPosition.rotation;
-            carDriver.StopCompletely();
-            checkpoints.ResetCheckpoint(transform);
-            lastPosition = transform.position;
+            AddReward(-1f);
+            ResetCar();
         }
 
-        // Existing checkpoint handling
+        // Let checkpoints handle themselves
         if (other.CompareTag("checkpoints"))
-        {
             checkpoints.CarThroughCheckpoint(other.transform, transform);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("walls"))
+        {
+            AddReward(-1f);
+            ResetCar();
         }
+    }
+
+    private void ResetCar()
+    {
+        carDriver.StopCompletely();
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        transform.position = startPos;
+        transform.rotation = startRot;
+
+        Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+        if (nextCp != null)
+            lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
     }
 }

@@ -1,6 +1,6 @@
 default_settings: null
 behaviors:
-  CarDriver:
+  Car Driver:
     trainer_type: ppo
     hyperparameters:
       batch_size: 10
@@ -34,7 +34,7 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-    init_path: null
+    init_path: results\carDriverAG2\Car Driver\checkpoint.pt
     keep_checkpoints: 5
     checkpoint_interval: 500000
     max_steps: 500000
@@ -63,8 +63,8 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: TestParameter1
-  initialize_from: null
+  run_id: TestParameters2
+  initialize_from: carDriverAG2
   load_model: false
   resume: false
   force: false
