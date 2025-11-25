@@ -24,7 +24,7 @@ public class checkpoints : MonoBehaviour
     {
         nextCheckpointIndexDict = new Dictionary<Transform, int>();
 
-        // Auto-fill the checkpoint list if a parent is assigned
+        // Auto-fill from parent
         if (checkpointsParent != null && checkpointList.Count == 0)
         {
             checkpointList = new List<Transform>();
@@ -33,9 +33,30 @@ public class checkpoints : MonoBehaviour
                 checkpointList.Add(child);
             }
 
-            // Optional: sort by name if needed (e.g., Checkpoint_01, Checkpoint_02)
-            checkpointList.Sort((a, b) => a.name.CompareTo(b.name));
+            // Sort numerically instead of alphabetically
+            checkpointList.Sort((a, b) =>
+            {
+                int numA = ExtractNumber(a.name);
+                int numB = ExtractNumber(b.name);
+                return numA.CompareTo(numB);
+            });
         }
+    }
+
+    // Extracts numeric part from a string (e.g., "checkpoint 12" -> 12)
+    private int ExtractNumber(string s)
+    {
+        string digits = "";
+        foreach (char c in s)
+        {
+            if (char.IsDigit(c))
+                digits += c;
+        }
+
+        if (string.IsNullOrEmpty(digits))
+            return 0;
+
+        return int.Parse(digits);
     }
 
     public void ResetCheckpoint(Transform car)

@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1764085046",
+        "python_version": "3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\dania\\OneDrive\\Desktop\\UOWD\\Autumn 2025\\CSCI218\\AiCar\\My project\\venv\\Scripts\\mlagents-learn config/carDriver.yaml --run-id=TestParameter01",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.8.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1764085082"
+    },
+    "total": 36.1031519,
+    "count": 1,
+    "self": 0.007779700000000389,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10097440000000013,
+            "count": 1,
+            "self": 0.10097440000000013
+        },
+        "TrainerController.start_learning": {
+            "total": 35.9943978,
+            "count": 1,
+            "self": 0.000355399999996564,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 35.9940324,
+                    "count": 1,
+                    "self": 35.9940324
+                },
+                "trainer_threads": {
+                    "total": 1.0999999986438525e-06,
+                    "count": 1,
+                    "self": 1.0999999986438525e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 8.900000004530284e-06,
+                    "count": 1,
+                    "self": 8.900000004530284e-06
+                }
+            }
+        }
+    }
+}
