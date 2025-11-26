@@ -1,0 +1,29 @@
+{
+    "Car Driver": {
+        "checkpoints": [
+            {
+                "steps": 47424,
+                "file_path": "results/Trainin1Mac/Car Driver/Car Driver-47424.onnx",
+                "reward": null,
+                "creation_time": 1764171462.959567,
+                "auxillary_file_paths": [
+                    "results/Trainin1Mac/Car Driver/Car Driver-47424.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 47424,
+            "file_path": "results/Trainin1Mac/Car Driver.onnx",
+            "reward": null,
+            "creation_time": 1764171462.959567,
+            "auxillary_file_paths": [
+                "results/Trainin1Mac/Car Driver/Car Driver-47424.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0"
+    }
+}
