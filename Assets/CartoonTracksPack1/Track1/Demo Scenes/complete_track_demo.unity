@@ -6991,7 +6991,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: a2982ed2994cd8240aecb3f0d55c54fb, type: 3}
   m_InferenceDevice: 3
   m_BehaviorType: 0
   m_BehaviorName: Car Driver
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a7b672c6108194e811c6ee18048344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarDriver
-  maxMotorTorque: 1500
+  maxMotorTorque: 700
   maxSteeringAngle: 30
   brakeForce: 3000
   frontLeftCollider: {fileID: 740142755}
@@ -7072,7 +7072,7 @@ MonoBehaviour:
   nearThreshold: 6
   mediumThreshold: 12
   minDistanceToConsider: 0.2
-  minThrottleMultiplier: 0.25
+  minThrottleMultiplier: 0.2
   steerStrength: 0.5
   fuzzyThrottle: 1
   fuzzySteer: 0
@@ -7095,7 +7095,7 @@ MonoBehaviour:
   collisionDistance: 1
   stuckSpeed: 0.5
   stuckTime: 1.5
-  speedMultiplier: 1
+  speedMultiplier: 0.885
   steerBoost: 0
 --- !u!1 &742412017
 GameObject:
