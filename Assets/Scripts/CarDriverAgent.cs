@@ -4,9 +4,15 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 
 /// CarDriverAgent with 4 control modes: RL, FSM, Fuzzy, Hybrid.
+/// This version has a trainingMode toggle so you can use the SAME script
+/// for training and for inference (using your semiF5 model).
 public class CarDriverAgent : Agent
 {
     public enum ControlMode { RL, FSM, Fuzzy, Hybrid }
+
+    [Header("Mode")]
+    [Tooltip("ON = training (rewards, EndEpisode). OFF = playback / inference (semiF5).")]
+    public bool trainingMode = false;
 
     [Header("Car Components")]
     public CarDriver carDriver;
@@ -23,7 +29,7 @@ public class CarDriverAgent : Agent
     [Header("Control Mode")]
     public ControlMode controlMode = ControlMode.Hybrid;
 
-    // RL action inputs
+    // RL action inputs from the NN
     private float rlThrottle = 0f;
     private float rlSteer = 0f;
 
@@ -53,7 +59,7 @@ public class CarDriverAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        // Full reset happens here every episode
+        // Called at start and when EndEpisode is used (trainingMode only).
         carDriver.StopCompletely();
 
         if (rb != null)
@@ -74,7 +80,7 @@ public class CarDriverAgent : Agent
         }
     }
 
-    // Vector obs count = 5  (3 dir + 1 distNorm + 1 velNorm)
+    // Vector obs count = 5 (3 dir + 1 distNorm + 1 velNorm)
     public override void CollectObservations(VectorSensor sensor)
     {
         Transform nextCp = (checkpoints != null) ? checkpoints.GetNextCheckpoint(transform) : null;
@@ -100,15 +106,22 @@ public class CarDriverAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // RL actions
-        rlSteer    = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        // === RAW NN OUTPUTS ===
+        rlSteer = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
 
-        // Allow forward + reverse, but punish reverse hard.
-        // If you want no reverse at all, change min to 0f.
-        rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
-        // rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], 0f, 1f); // <-- no reverse version
+        float rawThrottle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
-        // Update fuzzy & FSM (used only in non-RL modes)
+        // In playback mode (using semiF5), we DO NOT allow reverse.
+        if (trainingMode)
+        {
+            rlThrottle = rawThrottle;                  // allow reverse while training if needed
+        }
+        else
+        {
+            rlThrottle = Mathf.Clamp01(rawThrottle);   // 0..1 only -> no reverse
+        }
+
+        // === Update fuzzy & FSM (for FSM/Fuzzy/Hybrid modes) ===
         if (fuzzyLogic != null) fuzzyLogic.SampleAndCompute();
 
         float nearestDist = (fuzzyLogic != null && fuzzyLogic.nearestHitDistance < float.MaxValue)
@@ -124,6 +137,7 @@ public class CarDriverAgent : Agent
         float finalThrottle = 0f;
         float finalSteer = 0f;
 
+        // === CONTROL MODES ===
         switch (controlMode)
         {
             case ControlMode.RL:
@@ -156,31 +170,44 @@ public class CarDriverAgent : Agent
             case ControlMode.Hybrid:
             default:
             {
+                // Steering blend: RL + FSM + Fuzzy
                 float fuzzyS = (fuzzyLogic != null) ? fuzzyLogic.fuzzySteer : 0f;
                 float fsmS   = (fsm != null) ? fsm.steerBoost : 0f;
                 finalSteer   = rlSteer + fsmS + fuzzyS * 0.6f;
                 finalSteer   = Mathf.Clamp(finalSteer, -1f, 1f);
 
+                // Throttle blend: RL main, Fuzzy/FSM assist
                 float fuzzyThrottle = (fuzzyLogic != null) ? fuzzyLogic.fuzzyThrottle : 0f;
                 float fsmThrottle   = (fsm != null) ? fsm.speedMultiplier : 0f;
 
                 finalThrottle = rlThrottle * 0.7f + fuzzyThrottle * 0.2f + fsmThrottle * 0.2f;
-                finalThrottle = Mathf.Clamp(finalThrottle, -1f, 1f);
+
+                // In playback mode clamp to 0..1 so the car always goes forward.
+                if (!trainingMode)
+                {
+                    finalThrottle = Mathf.Clamp01(finalThrottle);
+                }
+                else
+                {
+                    finalThrottle = Mathf.Clamp(finalThrottle, -1f, 1f);
+                }
 
                 break;
             }
         }
 
+        // === APPLY TO CAR ===
         carDriver.SetInputs(finalThrottle, finalSteer);
 
-        // ======== REWARD SHAPING ========
+        // === REWARD LOGIC (TRAINING ONLY) ===
+        if (!trainingMode) return;  // skip everything below during inference
 
         float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
 
-        // Strong penalty for going backwards
+        // Penalty for going backwards
         if (forwardVelocity < -0.1f)
         {
-            AddReward(-0.05f);
+            AddReward(-0.03f);
         }
 
         if (checkpoints != null)
@@ -193,14 +220,14 @@ public class CarDriverAgent : Agent
                 if (forwardVelocity > 0f)
                 {
                     if (dist < lastDistanceToNextCheckpoint)
-                        AddReward(0.02f);  // good progress
+                        AddReward(0.002f);  // good progress
                     else
-                        AddReward(-0.01f); // drifting away
+                        AddReward(-0.001f); // drifting away
                 }
                 else
                 {
                     // moving backwards relative to forward
-                    AddReward(-0.02f);
+                    AddReward(-0.002f);
                 }
 
                 lastDistanceToNextCheckpoint = dist;
@@ -221,21 +248,28 @@ public class CarDriverAgent : Agent
     private void Checkpoints_OnCarCorrectCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
     {
         if (e.carTransform != transform) return;
-        AddReward(1.5f);
+        if (!trainingMode) return;
+
+        AddReward(1f);
     }
 
     private void Checkpoints_OnCarWrongCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
     {
         if (e.carTransform != transform) return;
-        AddReward(-2f);
+        if (!trainingMode) return;
+
+        AddReward(-1f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("walls"))
         {
-            AddReward(-2f);   // crash penalty
-            ResetCar();       // end episode
+            if (trainingMode)
+            {
+                AddReward(-1f);
+            }
+            ResetCar();
         }
 
         if (other.CompareTag("checkpoints") && checkpoints != null)
@@ -246,15 +280,40 @@ public class CarDriverAgent : Agent
     {
         if (collision.gameObject.CompareTag("walls"))
         {
-            AddReward(-1f);   // crash penalty
-            ResetCar();       // end episode
+            if (trainingMode)
+            {
+                AddReward(-1f);
+            }
+            ResetCar();
         }
     }
 
-    /// Ends the current episode (trainer will log stats),
-    /// and OnEpisodeBegin() will handle respawn.
+    /// Reset position & physics.
+    /// In trainingMode, also ends the episode so PPO sees the crash.
     private void ResetCar()
     {
-        EndEpisode();
+        carDriver.StopCompletely();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        transform.position = startPos;
+        transform.rotation = startRot;
+
+        if (checkpoints != null)
+        {
+            checkpoints.ResetCheckpoint(transform);
+            Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+            if (nextCp != null)
+                lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
+        }
+
+        if (trainingMode)
+        {
+            EndEpisode();
+        }
     }
 }

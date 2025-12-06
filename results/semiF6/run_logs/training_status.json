@@ -1,0 +1,29 @@
+{
+    "Car Driver": {
+        "checkpoints": [
+            {
+                "steps": 92130,
+                "file_path": "results\\semiF6\\Car Driver\\Car Driver-92130.onnx",
+                "reward": null,
+                "creation_time": 1765040285.0222673,
+                "auxillary_file_paths": [
+                    "results\\semiF6\\Car Driver\\Car Driver-92130.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 92130,
+            "file_path": "results\\semiF6\\Car Driver.onnx",
+            "reward": null,
+            "creation_time": 1765040285.0222673,
+            "auxillary_file_paths": [
+                "results\\semiF6\\Car Driver\\Car Driver-92130.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}
