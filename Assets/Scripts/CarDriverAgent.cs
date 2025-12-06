@@ -4,7 +4,6 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 
 /// CarDriverAgent with 4 control modes: RL, FSM, Fuzzy, Hybrid.
-/// Hybrid now blends RL, FSM, and Fuzzy additively for proper movement.
 public class CarDriverAgent : Agent
 {
     public enum ControlMode { RL, FSM, Fuzzy, Hybrid }
@@ -65,41 +64,57 @@ public class CarDriverAgent : Agent
         transform.position = startPos;
         transform.rotation = startRot;
 
-        if (checkpoints != null) checkpoints.ResetCheckpoint(transform);
-
-        Transform next = checkpoints != null ? checkpoints.GetNextCheckpoint(transform) : null;
-        if (next != null) lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, next.position);
+        if (checkpoints != null)
+        {
+            checkpoints.ResetCheckpoint(transform);
+            Transform next = checkpoints.GetNextCheckpoint(transform);
+            if (next != null)
+                lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, next.position);
+        }
     }
 
+    // Vector obs count = 5  (3 dir + 1 distNorm + 1 velNorm)
     public override void CollectObservations(VectorSensor sensor)
     {
-        Transform nextCp = checkpoints.GetNextCheckpoint(transform);
+        Transform nextCp = (checkpoints != null) ? checkpoints.GetNextCheckpoint(transform) : null;
+
         if (nextCp != null)
         {
-            Vector3 localDir = transform.InverseTransformDirection((nextCp.position - transform.position).normalized);
-            sensor.AddObservation(localDir);
+            Vector3 toCp = (nextCp.position - transform.position).normalized;
+            Vector3 localDir = transform.InverseTransformDirection(toCp);
+            sensor.AddObservation(localDir); // 3 floats
+
             float dist = Vector3.Distance(transform.position, nextCp.position);
-            sensor.AddObservation(Mathf.Clamp01(dist / 50f));
+            sensor.AddObservation(Mathf.Clamp01(dist / 50f)); // 1 float
         }
         else
         {
-            sensor.AddObservation(Vector3.zero);
-            sensor.AddObservation(1f);
+            sensor.AddObservation(Vector3.zero); // 3
+            sensor.AddObservation(1f);           // 1
         }
 
         float forwardVel = Vector3.Dot(rb.linearVelocity, transform.forward);
-        sensor.AddObservation(Mathf.Clamp((forwardVel + 10f) / 40f, 0f, 1f));
+        sensor.AddObservation(Mathf.Clamp((forwardVel + 10f) / 40f, 0f, 1f)); // 1 float
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        rlSteer = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        // RL actions
+        rlSteer   = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+
+        // OPTION 1: allow reverse but punish it strongly
         rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
+        // OPTION 2 (if you want no reverse at all):
+        // rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], 0f, 1f);
+
+        // Update fuzzy & FSM (for non-RL modes)
         if (fuzzyLogic != null) fuzzyLogic.SampleAndCompute();
 
         float nearestDist = (fuzzyLogic != null && fuzzyLogic.nearestHitDistance < float.MaxValue)
-            ? fuzzyLogic.nearestHitDistance : Mathf.Infinity;
+            ? fuzzyLogic.nearestHitDistance
+            : Mathf.Infinity;
+
         float nearestLocalX = 0f;
         if (fuzzyLogic != null && fuzzyLogic.nearestHitDistance < float.MaxValue)
             nearestLocalX = transform.InverseTransformPoint(fuzzyLogic.nearestHitPoint).x;
@@ -120,8 +135,11 @@ public class CarDriverAgent : Agent
 
             case ControlMode.FSM:
             {
-                finalThrottle = Mathf.Clamp01(fsm.speedMultiplier);
-                finalSteer = Mathf.Clamp(fsm.steerBoost, -1f, 1f);
+                if (fsm != null)
+                {
+                    finalThrottle = Mathf.Clamp01(fsm.speedMultiplier);
+                    finalSteer = Mathf.Clamp(fsm.steerBoost, -1f, 1f);
+                }
                 break;
             }
 
@@ -138,40 +156,57 @@ public class CarDriverAgent : Agent
             case ControlMode.Hybrid:
             default:
             {
-                // Steering blend: RL + FSM + Fuzzy
                 float fuzzyS = (fuzzyLogic != null) ? fuzzyLogic.fuzzySteer : 0f;
-                float fsmS = (fsm != null) ? fsm.steerBoost : 0f;
-                finalSteer = rlSteer + fsmS + fuzzyS * 0.6f;
-                finalSteer = Mathf.Clamp(finalSteer, -1f, 1f);
+                float fsmS   = (fsm != null) ? fsm.steerBoost : 0f;
+                finalSteer   = rlSteer + fsmS + fuzzyS * 0.6f;
+                finalSteer   = Mathf.Clamp(finalSteer, -1f, 1f);
 
-                // Throttle additive blend: RL dominates, FSM/Fuzzy provide AI correction
                 float fuzzyThrottle = (fuzzyLogic != null) ? fuzzyLogic.fuzzyThrottle : 0f;
-                float fsmThrottle = (fsm != null) ? fsm.speedMultiplier : 0f;
+                float fsmThrottle   = (fsm != null) ? fsm.speedMultiplier : 0f;
 
                 finalThrottle = rlThrottle * 0.7f + fuzzyThrottle * 0.2f + fsmThrottle * 0.2f;
                 finalThrottle = Mathf.Clamp(finalThrottle, -1f, 1f);
-
-                Debug.Log($"[Hybrid] Throttle: {finalThrottle:F2}, Steer: {finalSteer:F2} (RL: {rlThrottle:F2}, Fuzzy: {fuzzyThrottle:F2}, FSM: {fsmThrottle:F2})");
                 break;
             }
         }
 
         carDriver.SetInputs(finalThrottle, finalSteer);
 
-        // Reward shaping
-        float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
-        if (forwardVelocity < -0.5f) AddReward(-0.01f);
+        // ======== REWARD SHAPING ========
 
-        Transform nextCpCheck = checkpoints.GetNextCheckpoint(transform);
-        if (nextCpCheck != null)
+        float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
+
+        // Stronger penalty for going backwards
+        if (forwardVelocity < -0.1f)
         {
-            float dist = Vector3.Distance(transform.position, nextCpCheck.position);
-            if (dist < lastDistanceToNextCheckpoint) AddReward(0.002f);
-            else AddReward(-0.001f);
-            lastDistanceToNextCheckpoint = dist;
+            AddReward(-0.3f); // stronger than before
         }
 
-        AddReward(-0.0002f); // time penalty
+        // Progress only rewarded when moving forwards
+        if (checkpoints != null)
+        {
+            Transform nextCpCheck = checkpoints.GetNextCheckpoint(transform);
+            if (nextCpCheck != null)
+            {
+                float dist = Vector3.Distance(transform.position, nextCpCheck.position);
+
+                if (forwardVelocity > 0f)
+                {
+                    if (dist < lastDistanceToNextCheckpoint) AddReward(0.002f);
+                    else AddReward(-0.001f);
+                }
+                else
+                {
+                    // if moving backwards, treat as bad, even if distance shrinks
+                    AddReward(-0.02f);
+                }
+
+                lastDistanceToNextCheckpoint = dist;
+            }
+        }
+
+        // Small time penalty
+        AddReward(-0.0002f);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -184,7 +219,7 @@ public class CarDriverAgent : Agent
     private void Checkpoints_OnCarCorrectCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
     {
         if (e.carTransform != transform) return;
-        AddReward(1f);
+        AddReward(1.5f);
     }
 
     private void Checkpoints_OnCarWrongCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
@@ -197,11 +232,11 @@ public class CarDriverAgent : Agent
     {
         if (other.CompareTag("walls"))
         {
-            AddReward(-1f);
+            AddReward(-2f);
             ResetCar();
         }
 
-        if (other.CompareTag("checkpoints"))
+        if (other.CompareTag("checkpoints") && checkpoints != null)
             checkpoints.CarThroughCheckpoint(other.transform, transform);
     }
 
@@ -209,7 +244,7 @@ public class CarDriverAgent : Agent
     {
         if (collision.gameObject.CompareTag("walls"))
         {
-            AddReward(-1f);
+            AddReward(-2f);
             ResetCar();
         }
     }
@@ -231,7 +266,8 @@ public class CarDriverAgent : Agent
         {
             checkpoints.ResetCheckpoint(transform);
             Transform nextCp = checkpoints.GetNextCheckpoint(transform);
-            if (nextCp != null) lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
+            if (nextCp != null)
+                lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
         }
     }
 }
