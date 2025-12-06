@@ -1007,11 +1007,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93158353}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &100145930 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2699983780271061893, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &133614206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
@@ -1065,16 +1060,18 @@ MonoBehaviour:
   sphereRadius: 1
   rayLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 128
   nearThreshold: 6
-  mediumThreshold: 12
+  mediumThreshold: 10
   minDistanceToConsider: 0.2
-  minThrottleMultiplier: 0.2
-  steerStrength: 0.5
+  minThrottleMultiplier: 0
+  steerStrength: 0.049
+  sideSteerWeight: 0.06
   fuzzyThrottle: 1
   fuzzySteer: 0
   nearestHitDistance: 999
   nearestHitPoint: {x: 0, y: 0, z: 0}
+  nearestForwardFactor: 0
 --- !u!114 &133614210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,13 +1084,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50321459ba0277f4184ca1c7c00ac7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarFSM
-  state: 2
+  state: 1
   avoidDistance: 6
   collisionDistance: 1
   stuckSpeed: 0.5
   stuckTime: 1.5
-  speedMultiplier: 0.885
-  steerBoost: 0
+  speedMultiplier: 0.248
+  steerBoost: -1
 --- !u!114 &133614211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,13 +1107,14 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
+  trainingMode: 0
   carDriver: {fileID: 133614213}
   rb: {fileID: 133614215}
   checkpoints: {fileID: 378808531}
   fuzzyLogic: {fileID: 133614209}
   fsm: {fileID: 133614210}
   raySensor: {fileID: 133614214}
-  controlMode: 0
+  controlMode: 3
 --- !u!114 &133614212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,7 +1139,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: a2982ed2994cd8240aecb3f0d55c54fb, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: Car Driver
   TeamId: 0
   m_UseChildSensors: 1
@@ -2672,11 +2670,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299571750}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &305818113 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1276657636418845578, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &335768910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,11 +4128,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479823191}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!146 &503216857 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 8615825633152659129, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &503843731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4603,197 +4591,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75b153afc116e8c4b83693a9bbf7f515, type: 3}
---- !u!1 &545843613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &545843614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2902496c0120472b90269f94a0aec7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Demonstrations.DemonstrationRecorder
-  Record: 0
-  NumStepsToRecord: 0
-  DemonstrationName: carDriveDemo
-  DemonstrationDirectory: driveDemos
---- !u!114 &545843615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
-  DecisionPeriod: 1
-  TakeActionsBetweenDecisions: 1
---- !u!114 &545843616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6bf3f63f485628439e18603853f8933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FuzzyLogic
-  raysPerDirection: 6
-  maxRayDegrees: 70
-  rayLength: 20
-  sphereRadius: 1
-  rayLayerMask:
-    serializedVersion: 2
-    m_Bits: 192
-  nearThreshold: 6
-  mediumThreshold: 12
-  minDistanceToConsider: 0.2
-  minThrottleMultiplier: 0.2
-  steerStrength: 0.5
-  fuzzyThrottle: 1
-  fuzzySteer: 0
-  nearestHitDistance: 999
-  nearestHitPoint: {x: 0, y: 0, z: 0}
---- !u!114 &545843617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50321459ba0277f4184ca1c7c00ac7cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarFSM
-  state: 2
-  avoidDistance: 6
-  collisionDistance: 1
-  stuckSpeed: 0.5
-  stuckTime: 1.5
-  speedMultiplier: 0.885
-  steerBoost: 0
---- !u!114 &545843618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ed10ad19ca88a48831401a275dd104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarDriverAgent
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 5000
-  carDriver: {fileID: 545843620}
-  rb: {fileID: 545843622}
-  checkpoints: {fileID: 378808531}
-  fuzzyLogic: {fileID: 545843616}
-  fsm: {fileID: 545843617}
-  raySensor: {fileID: 545843621}
-  controlMode: 0
---- !u!114 &545843619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Policies.BehaviorParameters
-  m_BrainParameters:
-    VectorObservationSize: 5
-    NumStackedVectorObservations: 1
-    m_ActionSpec:
-      m_NumContinuousActions: 2
-      BranchSizes: 
-    VectorActionSize: 02000000
-    VectorActionDescriptions: []
-    VectorActionSpaceType: 1
-    hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: a2982ed2994cd8240aecb3f0d55c54fb, type: 3}
-  m_InferenceDevice: 3
-  m_BehaviorType: 0
-  m_BehaviorName: Car Driver
-  TeamId: 0
-  m_UseChildSensors: 1
-  m_UseChildActuators: 1
-  m_ObservableAttributeHandling: 0
---- !u!114 &545843620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a7b672c6108194e811c6ee18048344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarDriver
-  maxMotorTorque: 700
-  maxSteeringAngle: 30
-  brakeForce: 3000
-  frontLeftCollider: {fileID: 1121276462}
-  frontRightCollider: {fileID: 628523808}
-  rearLeftCollider: {fileID: 503216857}
-  rearRightCollider: {fileID: 636399813}
-  frontLeftMesh: {fileID: 305818113}
-  frontRightMesh: {fileID: 1545943090}
-  rearLeftMesh: {fileID: 2075907274}
-  rearRightMesh: {fileID: 100145930}
---- !u!114 &545843621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545843613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Sensors.RayPerceptionSensorComponent3D
-  m_SensorName: RayPerceptionSensor
-  m_DetectableTags:
-  - checkpoints
-  - walls
-  m_RaysPerDirection: 6
-  m_MaxRayDegrees: 70
-  m_SphereCastRadius: 1
-  m_RayLength: 20
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294966984
-  m_ObservationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
---- !u!54 &545843622 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5135156708204615449, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &563099484
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,11 +5146,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621633231}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!146 &628523808 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 7877667524431639919, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &632383938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5465,11 +5257,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632383938}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!146 &636399813 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 8706808774334851022, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &637116157
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,6 +7171,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
+  trainingMode: 0
   carDriver: {fileID: 740142762}
   rb: {fileID: 740142756}
   checkpoints: {fileID: 378808531}
@@ -7413,9 +7201,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: a2982ed2994cd8240aecb3f0d55c54fb, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: Car Driver
   TeamId: 0
   m_UseChildSensors: 1
@@ -7490,16 +7278,18 @@ MonoBehaviour:
   sphereRadius: 1
   rayLayerMask:
     serializedVersion: 2
-    m_Bits: 192
-  nearThreshold: 6
-  mediumThreshold: 12
+    m_Bits: 128
+  nearThreshold: 3
+  mediumThreshold: 8
   minDistanceToConsider: 0.2
-  minThrottleMultiplier: 0.2
+  minThrottleMultiplier: 0.3
   steerStrength: 0.5
+  sideSteerWeight: 0.2
   fuzzyThrottle: 1
   fuzzySteer: 0
   nearestHitDistance: 999
   nearestHitPoint: {x: 0, y: 0, z: 0}
+  nearestForwardFactor: 0
 --- !u!114 &740142765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7512,13 +7302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50321459ba0277f4184ca1c7c00ac7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarFSM
-  state: 2
-  avoidDistance: 6
-  collisionDistance: 1
+  state: 1
+  avoidDistance: 3
+  collisionDistance: 0.5
   stuckSpeed: 0.5
   stuckTime: 1.5
-  speedMultiplier: 0.885
-  steerBoost: 0
+  speedMultiplier: 0.211
+  steerBoost: -0.4
 --- !u!1 &742412017
 GameObject:
   m_ObjectHideFlags: 0
@@ -12055,11 +11845,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116404255}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!146 &1121276462 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 2239677824950174677, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123267284
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,125 +12849,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210132652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1214127823
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: maxSpeed
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: useEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: accelerationMultiplier
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: handbrakeDriftMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 26.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -24.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_Name
-      value: Prometheus (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1025541434198643357, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_Name
-      value: RearRightWheelcol
-      objectReference: {fileID: 0}
-    - target: {fileID: 1432273449035489855, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_Name
-      value: FrontRightWheelcol
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001459980240962088, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_Name
-      value: FrontLeftWheelcol
-      objectReference: {fileID: 0}
-    - target: {fileID: 5135156708204615449, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8557483882129953539, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      propertyPath: m_Name
-      value: RearLeftWheelcol
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 901333271, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843621}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843620}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843619}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843618}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843617}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843616}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843615}
-    - targetCorrespondingSourceObject: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 545843614}
-  m_SourcePrefab: {fileID: 100100000, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
 --- !u!1 &1222269382
 GameObject:
   m_ObjectHideFlags: 0
@@ -16957,11 +16623,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541859396}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1545943090 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2897099083007925690, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1555493569
 GameObject:
   m_ObjectHideFlags: 0
@@ -22812,11 +22473,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072306211}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2075907274 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6528361102885328038, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
-  m_PrefabInstance: {fileID: 1214127823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2079088206
 GameObject:
   m_ObjectHideFlags: 0
@@ -23722,7 +23378,6 @@ SceneRoots:
   - {fileID: 474775065}
   - {fileID: 740142746}
   - {fileID: 828455468}
-  - {fileID: 1214127823}
-  - {fileID: 378808532}
   - {fileID: 748434453}
   - {fileID: 1618641054}
+  - {fileID: 378808532}
