@@ -53,6 +53,7 @@ public class CarDriverAgent : Agent
 
     public override void OnEpisodeBegin()
     {
+        // Full reset happens here every episode
         carDriver.StopCompletely();
 
         if (rb != null)
@@ -100,15 +101,14 @@ public class CarDriverAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // RL actions
-        rlSteer   = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        rlSteer    = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
 
-        // OPTION 1: allow reverse but punish it strongly
+        // Allow forward + reverse, but punish reverse hard.
+        // If you want no reverse at all, change min to 0f.
         rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
+        // rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], 0f, 1f); // <-- no reverse version
 
-        // OPTION 2 (if you want no reverse at all):
-        // rlThrottle = Mathf.Clamp(actions.ContinuousActions[1], 0f, 1f);
-
-        // Update fuzzy & FSM (for non-RL modes)
+        // Update fuzzy & FSM (used only in non-RL modes)
         if (fuzzyLogic != null) fuzzyLogic.SampleAndCompute();
 
         float nearestDist = (fuzzyLogic != null && fuzzyLogic.nearestHitDistance < float.MaxValue)
@@ -166,6 +166,7 @@ public class CarDriverAgent : Agent
 
                 finalThrottle = rlThrottle * 0.7f + fuzzyThrottle * 0.2f + fsmThrottle * 0.2f;
                 finalThrottle = Mathf.Clamp(finalThrottle, -1f, 1f);
+
                 break;
             }
         }
@@ -176,13 +177,12 @@ public class CarDriverAgent : Agent
 
         float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
 
-        // Stronger penalty for going backwards
+        // Strong penalty for going backwards
         if (forwardVelocity < -0.1f)
         {
-            AddReward(-0.3f); // stronger than before
+            AddReward(-0.05f);
         }
 
-        // Progress only rewarded when moving forwards
         if (checkpoints != null)
         {
             Transform nextCpCheck = checkpoints.GetNextCheckpoint(transform);
@@ -192,12 +192,14 @@ public class CarDriverAgent : Agent
 
                 if (forwardVelocity > 0f)
                 {
-                    if (dist < lastDistanceToNextCheckpoint) AddReward(0.002f);
-                    else AddReward(-0.001f);
+                    if (dist < lastDistanceToNextCheckpoint)
+                        AddReward(0.02f);  // good progress
+                    else
+                        AddReward(-0.01f); // drifting away
                 }
                 else
                 {
-                    // if moving backwards, treat as bad, even if distance shrinks
+                    // moving backwards relative to forward
                     AddReward(-0.02f);
                 }
 
@@ -205,7 +207,7 @@ public class CarDriverAgent : Agent
             }
         }
 
-        // Small time penalty
+        // Small time penalty every step
         AddReward(-0.0002f);
     }
 
@@ -225,15 +227,15 @@ public class CarDriverAgent : Agent
     private void Checkpoints_OnCarWrongCheckpoint(object sender, checkpoints.CarCheckpointEventArgs e)
     {
         if (e.carTransform != transform) return;
-        AddReward(-1f);
+        AddReward(-2f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("walls"))
         {
-            AddReward(-2f);
-            ResetCar();
+            AddReward(-2f);   // crash penalty
+            ResetCar();       // end episode
         }
 
         if (other.CompareTag("checkpoints") && checkpoints != null)
@@ -244,30 +246,15 @@ public class CarDriverAgent : Agent
     {
         if (collision.gameObject.CompareTag("walls"))
         {
-            AddReward(-2f);
-            ResetCar();
+            AddReward(-1f);   // crash penalty
+            ResetCar();       // end episode
         }
     }
 
+    /// Ends the current episode (trainer will log stats),
+    /// and OnEpisodeBegin() will handle respawn.
     private void ResetCar()
     {
-        carDriver.StopCompletely();
-
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
-
-        transform.position = startPos;
-        transform.rotation = startRot;
-
-        if (checkpoints != null)
-        {
-            checkpoints.ResetCheckpoint(transform);
-            Transform nextCp = checkpoints.GetNextCheckpoint(transform);
-            if (nextCp != null)
-                lastDistanceToNextCheckpoint = Vector3.Distance(transform.position, nextCp.position);
-        }
+        EndEpisode();
     }
 }
