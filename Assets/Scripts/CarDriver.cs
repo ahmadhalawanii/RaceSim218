@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CarDriver : MonoBehaviour
 {
-    public float maxMotorTorque = 1500f;   // Acceleration force
-    public float maxSteeringAngle = 30f;   // Steering angle
+    public float maxMotorTorque = 1500f;
+    public float maxSteeringAngle = 30f; 
     public float brakeForce = 3000f;
 
     public WheelCollider frontLeftCollider;
@@ -24,7 +24,6 @@ public class CarDriver : MonoBehaviour
 
     private bool controlledByML = false;
 
-    // ********** REQUIRED FOR AGENT **********
     public void SetInputs(float forward, float turn)
     {
         motorInput = forward;
@@ -32,7 +31,6 @@ public class CarDriver : MonoBehaviour
         controlledByML = true;
     }
 
-    // ********** REQUIRED FOR AGENT **********
     public void StopCompletely()
     {
         motorInput = 0f;
@@ -43,11 +41,9 @@ public class CarDriver : MonoBehaviour
         rearLeftCollider.brakeTorque = brakeForce;
         rearRightCollider.brakeTorque = brakeForce;
 
-        // Stop wheel rotation completely
         ResetWheels();
     }
 
-    // ********** NEW: reset wheel rotations and steer angles **********
     public void ResetWheels()
     {
         frontLeftCollider.motorTorque = 0f;
@@ -64,11 +60,9 @@ public class CarDriver : MonoBehaviour
         frontRightCollider.steerAngle = 0f;
     }
 
-    // ****************************************
 
     void Update()
     {
-        // Only use keyboard input in Heuristic (player controlled)
         if (!controlledByML)
         {
             motorInput = Input.GetAxis("Vertical");
@@ -83,15 +77,12 @@ public class CarDriver : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Steering
         frontLeftCollider.steerAngle = steeringInput * maxSteeringAngle;
         frontRightCollider.steerAngle = steeringInput * maxSteeringAngle;
 
-        // Motor torque
         rearLeftCollider.motorTorque = motorInput * maxMotorTorque;
         rearRightCollider.motorTorque = motorInput * maxMotorTorque;
 
-        // Brake when no input
         if (motorInput == 0f)
         {
             frontLeftCollider.brakeTorque = brakeForce;
@@ -107,7 +98,6 @@ public class CarDriver : MonoBehaviour
             rearRightCollider.brakeTorque = 0f;
         }
 
-        // Reset ML flag each frame so Update knows if agent sent inputs
         controlledByML = false;
     }
 

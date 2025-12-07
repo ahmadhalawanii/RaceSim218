@@ -1,12 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-/// Very small Finite State Machine for high-level car behavior.
-/// Exposes two outputs:
-///   - speedMultiplier (0..1) to scale throttle
-///   - steerBoost (-1..1) to bias steering away from obstacles
-/// 
-/// Conditions are evaluated each Update(); FSM is intentionally simple and deterministic.
 public class CarFSM : MonoBehaviour
 {
     public enum State
@@ -36,7 +30,6 @@ public class CarFSM : MonoBehaviour
     [Range(-1f, 1f)]
     public float steerBoost = 0f;
 
-    // internals
     private Rigidbody rb;
     private float stuckTimer = 0f;
 
@@ -45,11 +38,8 @@ public class CarFSM : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    /// Evaluate the FSM given sensor inputs: nearest obstacle distance and local X of obstacle.
-    /// Call this every update/frame.
     public void Evaluate(float nearestObstacleDistance, float nearestLocalX)
     {
-        // Update stuck timer
         float forwardVel = Vector3.Dot(rb != null ? rb.linearVelocity : Vector3.zero, transform.forward);
         if (Mathf.Abs(forwardVel) < stuckSpeed)
         {
@@ -60,7 +50,6 @@ public class CarFSM : MonoBehaviour
             stuckTimer = 0f;
         }
 
-        // Determine state transitions
         if (stuckTimer >= stuckTime)
         {
             state = State.Recover;
@@ -78,7 +67,6 @@ public class CarFSM : MonoBehaviour
             state = State.Navigate;
         }
 
-        // Compute outputs for each state
         switch (state)
         {
             case State.Navigate:
@@ -86,12 +74,10 @@ public class CarFSM : MonoBehaviour
                 steerBoost = 0f;
                 break;
             case State.AvoidObstacle:
-                // slow a bit and bias steering away from obstacle (use sign of nearestLocalX)
                 speedMultiplier = 0.6f;
-                steerBoost = -Mathf.Sign(nearestLocalX) * 0.6f; // push away
+                steerBoost = -Mathf.Sign(nearestLocalX) * 0.6f;
                 break;
             case State.Recover:
-                // stop and orient to spawn or try small reverse to get free
                 speedMultiplier = 0.2f;
                 steerBoost = 0f;
                 break;

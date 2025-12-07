@@ -3,9 +3,6 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 
-/// CarDriverAgent with 4 control modes: RL, FSM, Fuzzy, Hybrid.
-/// This version has a trainingMode toggle so you can use the SAME script
-/// for training and for inference (using your semiF5 model).
 public class CarDriverAgent : Agent
 {
     public enum ControlMode { RL, FSM, Fuzzy, Hybrid }
@@ -29,11 +26,9 @@ public class CarDriverAgent : Agent
     [Header("Control Mode")]
     public ControlMode controlMode = ControlMode.Hybrid;
 
-    // RL action inputs from the NN
     private float rlThrottle = 0f;
     private float rlSteer = 0f;
 
-    // Start/reset
     private Vector3 startPos;
     private Quaternion startRot;
     private float lastDistanceToNextCheckpoint;
@@ -59,7 +54,6 @@ public class CarDriverAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        // Called at start and when EndEpisode is used (trainingMode only).
         carDriver.StopCompletely();
 
         if (rb != null)
@@ -80,7 +74,6 @@ public class CarDriverAgent : Agent
         }
     }
 
-    // Vector obs count = 5 (3 dir + 1 distNorm + 1 velNorm)
     public override void CollectObservations(VectorSensor sensor)
     {
         Transform nextCp = (checkpoints != null) ? checkpoints.GetNextCheckpoint(transform) : null;
@@ -89,39 +82,36 @@ public class CarDriverAgent : Agent
         {
             Vector3 toCp = (nextCp.position - transform.position).normalized;
             Vector3 localDir = transform.InverseTransformDirection(toCp);
-            sensor.AddObservation(localDir); // 3 floats
+            sensor.AddObservation(localDir);
 
             float dist = Vector3.Distance(transform.position, nextCp.position);
-            sensor.AddObservation(Mathf.Clamp01(dist / 50f)); // 1 float
+            sensor.AddObservation(Mathf.Clamp01(dist / 50f));
         }
         else
         {
-            sensor.AddObservation(Vector3.zero); // 3
-            sensor.AddObservation(1f);           // 1
+            sensor.AddObservation(Vector3.zero);
+            sensor.AddObservation(1f);
         }
 
         float forwardVel = Vector3.Dot(rb.linearVelocity, transform.forward);
-        sensor.AddObservation(Mathf.Clamp((forwardVel + 10f) / 40f, 0f, 1f)); // 1 float
+        sensor.AddObservation(Mathf.Clamp((forwardVel + 10f) / 40f, 0f, 1f));
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // === RAW NN OUTPUTS ===
         rlSteer = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
 
         float rawThrottle = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
-        // In playback mode (using semiF5), we DO NOT allow reverse.
         if (trainingMode)
         {
-            rlThrottle = rawThrottle;                  // allow reverse while training if needed
+            rlThrottle = rawThrottle; 
         }
         else
         {
-            rlThrottle = Mathf.Clamp01(rawThrottle);   // 0..1 only -> no reverse
+            rlThrottle = Mathf.Clamp01(rawThrottle); 
         }
 
-        // === Update fuzzy & FSM (for FSM/Fuzzy/Hybrid modes) ===
         if (fuzzyLogic != null) fuzzyLogic.SampleAndCompute();
 
         float nearestDist = (fuzzyLogic != null && fuzzyLogic.nearestHitDistance < float.MaxValue)
@@ -137,7 +127,6 @@ public class CarDriverAgent : Agent
         float finalThrottle = 0f;
         float finalSteer = 0f;
 
-        // === CONTROL MODES ===
         switch (controlMode)
         {
             case ControlMode.RL:
@@ -170,19 +159,16 @@ public class CarDriverAgent : Agent
             case ControlMode.Hybrid:
             default:
             {
-                // Steering blend: RL + FSM + Fuzzy
                 float fuzzyS = (fuzzyLogic != null) ? fuzzyLogic.fuzzySteer : 0f;
                 float fsmS   = (fsm != null) ? fsm.steerBoost : 0f;
                 finalSteer   = rlSteer + fsmS + fuzzyS * 0.6f;
                 finalSteer   = Mathf.Clamp(finalSteer, -1f, 1f);
 
-                // Throttle blend: RL main, Fuzzy/FSM assist
                 float fuzzyThrottle = (fuzzyLogic != null) ? fuzzyLogic.fuzzyThrottle : 0f;
                 float fsmThrottle   = (fsm != null) ? fsm.speedMultiplier : 0f;
 
                 finalThrottle = rlThrottle * 0.7f + fuzzyThrottle * 0.2f + fsmThrottle * 0.2f;
 
-                // In playback mode clamp to 0..1 so the car always goes forward.
                 if (!trainingMode)
                 {
                     finalThrottle = Mathf.Clamp01(finalThrottle);
@@ -196,15 +182,12 @@ public class CarDriverAgent : Agent
             }
         }
 
-        // === APPLY TO CAR ===
         carDriver.SetInputs(finalThrottle, finalSteer);
 
-        // === REWARD LOGIC (TRAINING ONLY) ===
-        if (!trainingMode) return;  // skip everything below during inference
+        if (!trainingMode) return;
 
         float forwardVelocity = Vector3.Dot(rb.linearVelocity, transform.forward);
 
-        // Penalty for going backwards
         if (forwardVelocity < -0.1f)
         {
             AddReward(-0.03f);
@@ -220,13 +203,12 @@ public class CarDriverAgent : Agent
                 if (forwardVelocity > 0f)
                 {
                     if (dist < lastDistanceToNextCheckpoint)
-                        AddReward(0.002f);  // good progress
+                        AddReward(0.002f);
                     else
-                        AddReward(-0.001f); // drifting away
+                        AddReward(-0.001f);
                 }
                 else
                 {
-                    // moving backwards relative to forward
                     AddReward(-0.002f);
                 }
 
@@ -234,7 +216,6 @@ public class CarDriverAgent : Agent
             }
         }
 
-        // Small time penalty every step
         AddReward(-0.0002f);
     }
 
@@ -288,8 +269,6 @@ public class CarDriverAgent : Agent
         }
     }
 
-    /// Reset position & physics.
-    /// In trainingMode, also ends the episode so PPO sees the crash.
     private void ResetCar()
     {
         carDriver.StopCompletely();

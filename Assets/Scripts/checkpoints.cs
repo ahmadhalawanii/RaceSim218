@@ -24,7 +24,6 @@ public class checkpoints : MonoBehaviour
     {
         nextCheckpointIndexDict = new Dictionary<Transform, int>();
 
-        // Auto-fill from parent
         if (checkpointsParent != null && checkpointList.Count == 0)
         {
             checkpointList = new List<Transform>();
@@ -33,7 +32,6 @@ public class checkpoints : MonoBehaviour
                 checkpointList.Add(child);
             }
 
-            // Sort numerically instead of alphabetically
             checkpointList.Sort((a, b) =>
             {
                 int numA = ExtractNumber(a.name);
@@ -43,7 +41,6 @@ public class checkpoints : MonoBehaviour
         }
     }
 
-    // Extracts numeric part from a string (e.g., "checkpoint 12" -> 12)
     private int ExtractNumber(string s)
     {
         string digits = "";
